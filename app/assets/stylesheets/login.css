@@ -1,0 +1,52 @@
+
+.background {
+    display: flex;
+    background-image: url('/netflix.jpg');
+    width: 100%;
+    height: 5000px;
+    
+}
+
+.login-form {
+ 
+    align-items: center;
+    justify-content: center;
+    /* margin-left: auto;
+    margin-right: auto; */
+    box-sizing: border-box;
+    margin: 1px;
+    font-size: 100px;
+    padding: 2px;
+    height: 500px;
+    width: 300px;
+    width: 40%;
+    background-color: black;
+    opacity: .75;
+    font-size: 16px;
+    direction: ltr;
+    color: white;
+    border-radius: 7px;
+    float: center;
+   
+}
+
+.session-submit {
+    background: red;
+    color: white;
+    height: 50px;
+    width: 300px;
+  
+    border-radius: 5px;
+    font-weight: normal;
+    font-size: 17px;
+   
+
+}
+
+.login-input {
+    background-color: grey;
+    border-radius: 5px;
+    width: 100px;
+    height: 15px;
+}
+
