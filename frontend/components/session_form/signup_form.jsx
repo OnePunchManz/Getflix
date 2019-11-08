@@ -1,4 +1,5 @@
 import React from 'react';
+import GreetingContainer from '../greeting/greeting_container'
 
 class SignUp extends React.Component {
     constructor(props) {
@@ -37,6 +38,7 @@ class SignUp extends React.Component {
     render() {
         return (
             <div className="">
+            < GreetingContainer />
                 <div className="signup-form-container">
                     <form onSubmit={this.handleSubmit} className="signup-form-box">
                         <div className="form">

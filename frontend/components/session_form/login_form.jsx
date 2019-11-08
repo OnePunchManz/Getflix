@@ -1,4 +1,5 @@
 import React from 'react';
+import GreetingContainer from '../greeting/greeting_container'
 
 class LoginForm extends React.Component {
     constructor(props) {
@@ -37,6 +38,7 @@ class LoginForm extends React.Component {
     render() {
         return (
             <div className="background">
+                <GreetingContainer /> 
                 <div className="login-form-container">
                     <form onSubmit={this.handleSubmit} className="login-form-box">
                         Welcome to Netflix and Chill!

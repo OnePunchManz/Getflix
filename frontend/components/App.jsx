@@ -13,7 +13,7 @@ import LogInFormContainer from './session_form/login_form_container';
 const App = () => (
     <div>
         <header>
-        <GreetingContainer />
+        {/* <GreetingContainer /> */}
         </header>
         <Route path="/login" component={LogInFormContainer} />
         <Route path="/signup" component={SignUpFormContainer} />

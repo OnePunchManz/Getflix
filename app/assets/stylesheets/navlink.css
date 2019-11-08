@@ -57,7 +57,7 @@
 .mainLoginNav {
     display:flex;
     justify-content: space-between;
-    opacity: .80;
+    opacity: .90;
     height: 110px;
     background-color: transparent;
      border-bottom: 1px solid lightslategray;
