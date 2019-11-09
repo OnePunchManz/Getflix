@@ -58,8 +58,7 @@ class SignUp extends React.Component {
                                         value={this.state.username}
                                         onChange={this.update('username')}
                                         className="signup-input"
-                                         placeholder='Email'
-                                            
+                                         placeholder='Email'         
                                     />
                                 {/* </label> */}
                             </div>
@@ -74,8 +73,9 @@ class SignUp extends React.Component {
                                     />
                                 {/* </label> */}
                             </div>
-
-                            <input className="signup-session-submit" typ    e="submit" value={this.props.formType} />
+                                <div className="submitDiv">
+                                <input className="signup-session-submit" type="submit" value={this.props.formType}/>
+                                </div>
                         </div>
                     </form>
                 </div>

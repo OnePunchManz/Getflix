@@ -24,11 +24,11 @@ class Greeting extends React.Component {
         if (this.props.location.pathname === '/signup') {
             return (
                 <div className='mainNav'>
-                    <img className='logo' src="/netflix_logo.jpg" alt="" />
+                    <img className='logo' src="/netflix.png" alt="" />
                     <div className="bottomNav">
                         <div className="signinNav">
                         </div>
-                        <Link to="/login">Sign In</Link>
+                        <Link className="signIn" to="/login">Sign In</Link>
                     </div>
                 </div>
             )
@@ -36,7 +36,7 @@ class Greeting extends React.Component {
         else if (this.props.location.pathname === '/login') {
             return (
                 <div className='mainLoginNav'>
-                    <img className='logo' src="/netflix_logo.jpg" alt="" />
+                    <img className='logo' src="/netflix.png" alt="" />
                     <div className="bottomNav">
                         <div className="signinNav">
                         </div>

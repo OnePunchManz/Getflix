@@ -1,33 +1,50 @@
 
 .background {
+    flex-direction: column;
     display: flex;
-    background-image: url('/netflix.jpg');
+    background-image: url(/netflix.jpg);
     width: 100%;
-    height: 5000px;
+    height: 800px;
     
 }
 
 .login-form {
- 
+    
     align-items: center;
     justify-content: center;
-    /* margin-left: auto;
-    margin-right: auto; */
     box-sizing: border-box;
     margin: 1px;
     font-size: 100px;
     padding: 2px;
     height: 500px;
-    width: 300px;
-    width: 40%;
+    width: 400px;
     background-color: black;
-    opacity: .75;
+    opacity: .9;
     font-size: 16px;
     direction: ltr;
-    color: white;
+    /* color: white; */
     border-radius: 7px;
-    float: center;
+    /* float: center; */
    
+}
+
+.login-form-box {
+    background: black;
+    opacity: .8;
+    display: flex;
+    align-content: center;
+    height: 100px;
+    flex-direction: column;
+    height: 500px;
+    justify-content: space-between;
+    margin: auto;
+    padding: 30px;
+    border-radius: 7px;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+  opacity: 2; /* Firefox */
 }
 
 .session-submit {
@@ -43,10 +60,17 @@
 
 }
 
+.signInMessage {
+    display: flex;
+    color: whitesmoke;
+    font-size: 35px;
+}
+
 .login-input {
-    background-color: grey;
+    background-color: dimgray;
     border-radius: 5px;
-    width: 100px;
-    height: 15px;
+    width: 300px;
+    height: 50px;
+    color: white;
 }
 

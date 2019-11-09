@@ -1,5 +1,4 @@
 .logo {
-    background-image: url('/netflix_logo.jpg');
     width: 200px;
     height: 110px;
 }
@@ -9,6 +8,7 @@
     padding-right: 10px;
     font-size: 20px;
     color: black;
+    
    
 }
 
@@ -57,10 +57,18 @@
 .mainLoginNav {
     display:flex;
     justify-content: space-between;
-    opacity: .90;
+    opacity: .99;
     height: 110px;
     background-color: transparent;
-     border-bottom: 1px solid lightslategray;
+     /* border-bottom: 1px solid lightslategray; */
     position: relative;
     
+}
+
+.signIn {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    color: black;
 }

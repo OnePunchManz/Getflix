@@ -1,8 +1,6 @@
 .signup-form-box {
     display: flex;
-    /* position: relative; */
     justify-content: center;
-    padding: 5px;
     flex-direction: column;
     text-align: center;
     
@@ -11,21 +9,25 @@
 /* .signup-input:focus {
     /* background-color: red; */
 /* } */
-
+/* 
 .signup-input:focus label {
     
     transform: translate(-8px);
     transition: transform 0.2s ease 0s, translate 0.2s ease 0s;
-}
+} */
 
 .form {
     display: flex;
-    flex: start;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 456px;
+    margin: auto;
 }
 
 .stepTitle {
     right: auto;
     left: auto;
+    padding: 10px
 }
 
 
@@ -34,8 +36,7 @@
     /* position: absolute; */
     font-weight: bold;
     font-size: 23px;
-    font-style: oblique;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+   font-family: sans-serif;
     
     padding: 5px;
     height: 15px;
@@ -44,44 +45,52 @@
 
 .regFormTitle {
     font-size: 15px;
-    /* position: absolute; */
+     padding: 10px;
     font-weight: bold;
-    font-style: oblique;
-     font-family: Georgia, 'Times New Roman', Times, serif;
-    /* margin-top: 10px; */
-    /* display: center; */
-    /* padding: 5px; */
+   font-family: sans-serif;
+  
+
     height: 15px;
     
 }
 
 
 
-.signup-input-password{
-   
-    
-}
-
-.signup-input {
-    
-}
 
 .signup-input{
     height: 40px;
     width: 450px;
-    border-radius: 2px;
+    border-radius: 5px;
+    padding: 8px;
 }
 
 .signup-session-submit {
     background: red;
     color: white;
     height: 50px;
-    width: 450px;
-  
+    width: 470px;
+    padding: 10px;
     border-radius: 5px;
     font-weight: normal;
     font-size: 17px;
     text-align: center;
    
 
+}
+
+.signup-input-user {
+   padding: 10px;
+}
+
+
+.signup-input-password {
+   padding: 10px;
+}
+
+.submitDiv {
+    padding: 15px;
+}
+
+.signInMessage {
+    font-family: sans-serif;
 }
