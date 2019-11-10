@@ -1,0 +1,24 @@
+.actualMainNav {
+    display:flex;
+    justify-content: space-between;
+    height: 110px;
+    background-color: transparent;
+    position: relative;
+    flex-direction: row;
+    
+}
+
+ .actualBottomNav {
+     display: flex;
+   
+ 
+} 
+
+.actualSignIn {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    color: black;
+     flex-direction: row;
+}

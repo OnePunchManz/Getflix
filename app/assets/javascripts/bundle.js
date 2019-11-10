@@ -199,6 +199,7 @@ var App = function App() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _greeting_greeting_container__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../greeting/greeting_container */ "./frontend/components/greeting/greeting_container.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -219,21 +220,30 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
+
 var BrowsePage =
 /*#__PURE__*/
 function (_React$Component) {
   _inherits(BrowsePage, _React$Component);
 
-  function BrowsePage(props) {
+  function BrowsePage() {
     _classCallCheck(this, BrowsePage);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(BrowsePage).call(this, props));
+    return _possibleConstructorReturn(this, _getPrototypeOf(BrowsePage).apply(this, arguments));
   }
 
   _createClass(BrowsePage, [{
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "This is working"));
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_greeting_greeting_container__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "This is working"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("iframe", {
+        width: "750",
+        height: "500",
+        src: "https://www.youtube.com/embed/atxYe-nOa9w?controls=0&start=42",
+        frameborder: "0",
+        allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
+        allowfullscreen: true,
+        autoplay: true
+      }));
     }
   }]);
 
@@ -259,12 +269,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var mSTP = function mSTP(state) {
-  user: {
-    state.props.user;
-  }
+  return {};
 };
 
-var mDTP = function mDTP(dispatch) {};
+var mDTP = function mDTP(dispatch) {
+  return {};
+};
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_0__["connect"])(mSTP, mDTP)(_browse__WEBPACK_IMPORTED_MODULE_1__["default"]));
 
@@ -357,22 +367,38 @@ function (_React$Component) {
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "signinNav"
         })));
+      } else if (this.props.location.pathname === '/browse') {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "actualMainNav"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+          className: "logo",
+          src: "/netflix.png",
+          alt: ""
+        }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "actualBottomNav"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "actualSigninNav"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+          className: "actualSignIn",
+          to: "/login"
+        }, "Home"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+          className: "actualSignIn",
+          to: "/login"
+        }, "TV Shows"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+          className: "actualSignIn",
+          to: "/login"
+        }, "Movies"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+          className: "actualSignIn",
+          to: "/login"
+        }, "Recently Added"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+          className: "actualSignIn",
+          to: "/login"
+        }, "My List"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "navRight"
+        }));
       }
 
-      {
-        /* <div className="browseNav">
-               </div>
-                   <Link to="/login">Home</Link>
-               <div className="moviesNav">
-               </div>
-                   <Link to="/login">Movies</Link>
-               <div className="recentlyAddedNav">
-               </div>
-                   <Link to="/login">Recently Added</Link>
-               <div className="myListNav">
-               </div>
-                   <Link to="/login"> My List</Link> */
-      }
+      ;
     }
   }]);
 

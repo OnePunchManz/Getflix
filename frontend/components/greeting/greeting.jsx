@@ -44,25 +44,30 @@ class Greeting extends React.Component {
                 </div>
             )
         }
-
-
-        {/* <div className="browseNav">
+        else if (this.props.location.pathname === '/browse'){
+            return (
+                <div className='actualMainNav'>
+                    <img className='logo' src="/netflix.png" alt="" />
+                    <div className="actualBottomNav">
+                        <div className="actualSigninNav">
+                            <Link className="actualSignIn" to="/login">Home</Link>
+                            <Link className="actualSignIn" to="/login">TV Shows</Link>
+                            <Link className="actualSignIn" to="/login">Movies</Link>
+                            <Link className="actualSignIn" to="/login">Recently Added</Link>
+                            <Link className="actualSignIn" to="/login">My List</Link>
+                        </div>
+                    </div>
+                    <div className="navRight">
+                        
+                    </div>
                 </div>
-                    <Link to="/login">Home</Link>
-                <div className="moviesNav">
-                </div>
-                    <Link to="/login">Movies</Link>
-                <div className="recentlyAddedNav">
-                </div>
-                    <Link to="/login">Recently Added</Link>
-                <div className="myListNav">
-                </div>
-                    <Link to="/login"> My List</Link> */}
+                )
+            };
+        }
 
-
+    
     };
 
-};
 
 
 export default Greeting;
