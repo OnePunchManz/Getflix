@@ -1,5 +1,6 @@
 mainBrowseDiv {
     display: flex;
+    font-family: sans-serif;
 }
 
 .browse-buttons {
@@ -14,6 +15,7 @@ mainBrowseDiv {
     font-weight: normal;
     font-size: 17px;
     z-index: 1;
+    font-family: sans-serif;
 
 }
 
@@ -29,6 +31,7 @@ mainBrowseDiv {
     font-weight: normal;
     font-size: 17px;
     z-index: 1;
+    font-family: sans-serif;
 
 }
 
@@ -44,6 +47,7 @@ mainBrowseDiv {
     font-weight: normal;
     font-size: 17px;
     z-index: 1;
+    font-family: sans-serif;
 
 }
 .mainVideo {

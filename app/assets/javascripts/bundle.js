@@ -351,11 +351,14 @@ function (_React$Component) {
       if (this.props.location.pathname === '/signup') {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "mainNav"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+          className: "",
+          to: "/login"
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
           className: "logo",
           src: "/netflix.png",
           alt: ""
-        }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "bottomNav"
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "signinNav"
@@ -366,11 +369,14 @@ function (_React$Component) {
       } else if (this.props.location.pathname === '/login') {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "mainLoginNav"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+          className: "",
+          to: "/signup"
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
           className: "logo",
           src: "/netflix.png",
           alt: ""
-        }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "bottomNav"
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "signinNav"
