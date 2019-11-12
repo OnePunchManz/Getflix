@@ -7,6 +7,7 @@ class BrowsePage extends React.Component {
 
     render(){
         return(
+            <div className="mainerDev">
             <div className="mainBrowseDiv">
                 <GreetingContainer /> 
                 <div className="video">
@@ -16,7 +17,23 @@ class BrowsePage extends React.Component {
                 <button className="browse-buttons"> Play</button>
                 <button className="browse-buttons-2"> + My List</button>
                 <button className="browse-buttons-3"> More Info</button>
-                {/* <img src="./demonslayer.jpg" height="213.5" width="120" alt=""/> */}
+            </div>
+            <div className="movieRow">
+
+                    <li>
+                    <img src="./demonslayer.jpg" height="213.5" width="120" alt=""/>
+                    </li>
+                    <li>
+                        <img src="./demonslayer.jpg" height="213.5" width="120" alt="" />
+                    </li>
+                    <li>
+                        <img src="./demonslayer.jpg" height="213.5" width="120" alt="" />
+                    </li>
+                    <li>
+                        <img src="./demonslayer.jpg" height="213.5" width="120" alt="" />
+                    </li>
+               
+                 </div>
             </div>
         )
     }

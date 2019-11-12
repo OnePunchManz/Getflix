@@ -236,6 +236,8 @@ function (_React$Component) {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "mainerDev"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "mainBrowseDiv"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_greeting_greeting_container__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "video"
@@ -251,7 +253,29 @@ function (_React$Component) {
         className: "browse-buttons-2"
       }, " + My List"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         className: "browse-buttons-3"
-      }, " More Info"));
+      }, " More Info")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "movieRow"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: "./demonslayer.jpg",
+        height: "213.5",
+        width: "120",
+        alt: ""
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: "./demonslayer.jpg",
+        height: "213.5",
+        width: "120",
+        alt: ""
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: "./demonslayer.jpg",
+        height: "213.5",
+        width: "120",
+        alt: ""
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: "./demonslayer.jpg",
+        height: "213.5",
+        width: "120",
+        alt: ""
+      }))));
     }
   }]);
 
@@ -646,7 +670,7 @@ function (_React$Component) {
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         className: "session-submit",
         type: "submit",
-        value: this.props.formType
+        value: "Sign In"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         className: "session-submit",
         type: "submit",
@@ -655,7 +679,7 @@ function (_React$Component) {
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
         className: "signupLink",
         to: "/signup"
-      }, "Click Here to SignUp")));
+      }, "New to Netflix? Sign up now. ")));
     }
   }]);
 

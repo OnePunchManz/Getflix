@@ -75,12 +75,12 @@ class LoginForm extends React.Component {
                                     className="login-input"
                                     placeholder="Password"
                                 />
-                            <input className="session-submit" type="submit" value={this.props.formType}
+                            <input className="session-submit" type="submit" value="Sign In"
                             />
                             <input className="session-submit" type="submit" value="Sign In as Guest" onClick={this.login}
                              />
 
-                            <Link className="signupLink" to="/signup" >Click Here to SignUp</Link>
+                            <Link className="signupLink" to="/signup" >New to Netflix? Sign up now. </Link>
                         {/* </div> */}
                     </form>
                 {/* </div> */}
