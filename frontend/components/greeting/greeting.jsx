@@ -6,6 +6,7 @@ class Greeting extends React.Component {
         super(props)
     }
 
+
     //  sessionLinks = () => (
     //     <nav className="login-signup">
     //         <Link to="/login">Signin</Link>
@@ -47,17 +48,41 @@ class Greeting extends React.Component {
         else if (this.props.location.pathname === '/browse'){
             return (
                 <div className='actualMainNav'>
+                    <div className="actualNav">
                     <img className='logo' src="/netflix.png" alt="" />
-                    <div className="actualBottomNav">
-                        <div className="actualSigninNav">
+                        {/* <div className="actualSigninNav"> */}
+                        <ul className="navList">
+                            <li className="navItem">
                             <Link className="actualSignIn" to="/login">Home</Link>
+                            </li>
+                            <li className="navItem">
                             <Link className="actualSignIn" to="/login">TV Shows</Link>
+                            </li>
+                            <li className="navItem">
                             <Link className="actualSignIn" to="/login">Movies</Link>
+                            </li>
+                            <li className="navItem">
                             <Link className="actualSignIn" to="/login">Recently Added</Link>
+                            </li>
+                            <li className="navItem">
                             <Link className="actualSignIn" to="/login">My List</Link>
-                        </div>
+                            </li>
+                        </ul>
+                        {/* </div> */}
                     </div>
                     <div className="navRight">
+                        <div className="dropdown" >
+                            <button className="dropbtn"><img src="https://occ-0-2218-2219.1.nflxso.net/art/65b1d/4b57a37098753aff58d937d5a138c9753e465b1d.png" alt=""/></button>
+                            <div className="dropdown-content">
+                                <a href="#">Manage Profiles</a>
+                                {/* <a href="#">Account</a>
+                                <a href="#">Help Center</a> */}
+                                <a href="/#/login" onClick={this.props.logout} >Sign out of Netflix</a>
+                            </div>
+                        </div>
+                        <img className="profile-icon"  alt=""></img>
+                
+                     
                         
                     </div>
                 </div>

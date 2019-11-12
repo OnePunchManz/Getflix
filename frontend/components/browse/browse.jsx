@@ -7,11 +7,15 @@ class BrowsePage extends React.Component {
 
     render(){
         return(
-            <div>
+            <div className="mainBrowseDiv">
                 <GreetingContainer /> 
-                <h1>This is working</h1>
-                {/* <video src="https://bazaar-media-bucket.s3-us-west-1.amazonaws.com/daze.mp4" autoplay="true"></video> */}
-                <iframe width="750" height="500" src="https://www.youtube.com/embed/atxYe-nOa9w?controls=0&amp;start=42" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen autoplay></iframe>
+                <div className="video">
+                <iframe className="mainVideo" width="1600" height="1000" src="https://www.youtube.com/embed/atxYe-nOa9w?controls=0&amp;start=42" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
+
+                </div>
+                <button className="browse-buttons"> Play</button>
+                <button className="browse-buttons-2"> + My List</button>
+                <button className="browse-buttons-3"> More Info</button>
             </div>
         )
     }

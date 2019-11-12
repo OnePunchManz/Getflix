@@ -135,8 +135,8 @@ var login = function login(user) {
 };
 var logout = function logout() {
   return function (dispatch) {
-    return _util_session_api_util__WEBPACK_IMPORTED_MODULE_0__["logout"].then(function () {
-      return dispatch(logoutCurrentUser);
+    return _util_session_api_util__WEBPACK_IMPORTED_MODULE_0__["logout"]().then(function () {
+      return dispatch(logoutCurrentUser());
     });
   };
 };
@@ -235,15 +235,23 @@ function (_React$Component) {
   _createClass(BrowsePage, [{
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_greeting_greeting_container__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "This is working"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("iframe", {
-        width: "750",
-        height: "500",
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "mainBrowseDiv"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_greeting_greeting_container__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "video"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("iframe", {
+        className: "mainVideo",
+        width: "1600",
+        height: "1000",
         src: "https://www.youtube.com/embed/atxYe-nOa9w?controls=0&start=42",
-        frameborder: "0",
-        allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
-        allowfullscreen: true,
-        autoplay: true
-      }));
+        allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        className: "browse-buttons"
+      }, " Play"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        className: "browse-buttons-2"
+      }, " + My List"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        className: "browse-buttons-3"
+      }, " More Info"));
     }
   }]);
 
@@ -370,32 +378,59 @@ function (_React$Component) {
       } else if (this.props.location.pathname === '/browse') {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "actualMainNav"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "actualNav"
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
           className: "logo",
           src: "/netflix.png",
           alt: ""
-        }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-          className: "actualBottomNav"
-        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-          className: "actualSigninNav"
+        }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+          className: "navList"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+          className: "navItem"
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
           className: "actualSignIn",
           to: "/login"
-        }, "Home"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        }, "Home")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+          className: "navItem"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
           className: "actualSignIn",
           to: "/login"
-        }, "TV Shows"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        }, "TV Shows")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+          className: "navItem"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
           className: "actualSignIn",
           to: "/login"
-        }, "Movies"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        }, "Movies")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+          className: "navItem"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
           className: "actualSignIn",
           to: "/login"
-        }, "Recently Added"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+        }, "Recently Added")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+          className: "navItem"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
           className: "actualSignIn",
           to: "/login"
-        }, "My List"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        }, "My List")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "navRight"
-        }));
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "dropdown"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+          className: "dropbtn"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+          src: "https://occ-0-2218-2219.1.nflxso.net/art/65b1d/4b57a37098753aff58d937d5a138c9753e465b1d.png",
+          alt: ""
+        })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "dropdown-content"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+          href: "#"
+        }, "Manage Profiles"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+          href: "/#/login",
+          onClick: this.props.logout
+        }, "Sign out of Netflix"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+          className: "profile-icon",
+          alt: ""
+        })));
       }
 
       ;
@@ -544,10 +579,17 @@ function (_React$Component) {
   }, {
     key: "handleSubmit",
     value: function handleSubmit(e) {
+      var _this3 = this;
+
       e.preventDefault();
       var user = Object.assign({}, this.state);
-      this.props.processForm(user);
-    } // renderErrors() {
+      this.props.processForm(user).then(function () {
+        _this3.props.history.push('/browse');
+      });
+    }
+  }, {
+    key: "render",
+    // renderErrors() {
     //     return (
     //         <ul>
     //             {this.props.errors.map((error, i) => (
@@ -558,9 +600,6 @@ function (_React$Component) {
     //         </ul>
     //     );
     // }
-
-  }, {
-    key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "background"
@@ -831,14 +870,30 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _store_store__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./store/store */ "./frontend/store/store.js");
 /* harmony import */ var _components_root__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/root */ "./frontend/components/root.jsx");
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 
 
 
 
 document.addEventListener('DOMContentLoaded', function () {
-  var store = Object(_store_store__WEBPACK_IMPORTED_MODULE_2__["default"])();
-  window.getState = store.getState;
-  window.dispatch = store.dispatch;
+  var store;
+
+  if (window.currentUser) {
+    var preloadedState = {
+      session: {
+        id: window.currentUser.id
+      },
+      entities: {
+        users: _defineProperty({}, window.currentUser.id, window.currentUser)
+      }
+    };
+    store = Object(_store_store__WEBPACK_IMPORTED_MODULE_2__["default"])(preloadedState);
+    delete window.currentUser;
+  } else {
+    store = Object(_store_store__WEBPACK_IMPORTED_MODULE_2__["default"])();
+  }
+
   var root = document.getElementById('root');
   react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_root__WEBPACK_IMPORTED_MODULE_3__["default"], {
     store: store
