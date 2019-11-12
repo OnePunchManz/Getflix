@@ -1,5 +1,6 @@
 import React from 'react';
-import GreetingContainer from '../greeting/greeting_container'
+import GreetingContainer from '../greeting/greeting_container';
+import { Link } from 'react-router-dom';
 
 class LoginForm extends React.Component {
     constructor(props) {
@@ -9,6 +10,7 @@ class LoginForm extends React.Component {
             password: ''
         };
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.login = this.login.bind(this);
     }
 
     update(field) {
@@ -24,6 +26,18 @@ class LoginForm extends React.Component {
             this.props.history.push('/browse')
         })
     };
+
+    login(e) {
+        e.preventDefault();
+        const user = {
+            username: 'zaidclone',
+            password: 'password'
+        };
+        this.props.processForm(user).then(() => {
+            this.props.history.push('/browse')
+        })
+
+    }
 
     // renderErrors() {
     //     return (
@@ -61,7 +75,12 @@ class LoginForm extends React.Component {
                                     className="login-input"
                                     placeholder="Password"
                                 />
-                            <input className="session-submit" type="submit" value={this.props.formType} />
+                            <input className="session-submit" type="submit" value={this.props.formType}
+                            />
+                            <input className="session-submit" type="submit" value="Sign In as Guest" onClick={this.login}
+                             />
+
+                            <Link className="signupLink" to="/signup" >Click Here to SignUp</Link>
                         {/* </div> */}
                     </form>
                 {/* </div> */}

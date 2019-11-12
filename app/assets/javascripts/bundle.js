@@ -525,6 +525,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _greeting_greeting_container__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../greeting/greeting_container */ "./frontend/components/greeting/greeting_container.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -548,6 +549,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
+
 var LoginForm =
 /*#__PURE__*/
 function (_React$Component) {
@@ -564,6 +566,7 @@ function (_React$Component) {
       password: ''
     };
     _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
+    _this.login = _this.login.bind(_assertThisInitialized(_this));
     return _this;
   }
 
@@ -588,8 +591,19 @@ function (_React$Component) {
       });
     }
   }, {
-    key: "render",
-    // renderErrors() {
+    key: "login",
+    value: function login(e) {
+      var _this4 = this;
+
+      e.preventDefault();
+      var user = {
+        username: 'zaidclone',
+        password: 'password'
+      };
+      this.props.processForm(user).then(function () {
+        _this4.props.history.push('/browse');
+      });
+    } // renderErrors() {
     //     return (
     //         <ul>
     //             {this.props.errors.map((error, i) => (
@@ -600,6 +614,9 @@ function (_React$Component) {
     //         </ul>
     //     );
     // }
+
+  }, {
+    key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "background"
@@ -624,7 +641,15 @@ function (_React$Component) {
         className: "session-submit",
         type: "submit",
         value: this.props.formType
-      })));
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        className: "session-submit",
+        type: "submit",
+        value: "Sign In as Guest",
+        onClick: this.login
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+        className: "signupLink",
+        to: "/signup"
+      }, "Click Here to SignUp")));
     }
   }]);
 
