@@ -11,7 +11,10 @@ class BrowsePage extends React.Component {
             <div className="mainBrowseDiv">
                 <GreetingContainer /> 
                 <div className="video">
-                <iframe className="mainVideo" width="1600" height="1000" src="https://www.youtube.com/embed/atxYe-nOa9w?controls=0&amp;start=42" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
+                {/* <iframe className="mainVideo" width="1600" height="1000" src="https://www.youtube.com/embed/atxYe-nOa9w?controls=0&amp;start=42" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
+                */}
+
+                        <video src="https://onebucketman.s3-us-west-1.amazonaws.com/My+Hero+Academia+-+Opening+2+_+Peace+Sign+(1080p_24fps_H264-128kbit_AAC).mp4" width="250px" height="250px"></video>
 
                 </div>
                 <button className="browse-buttons"> Play</button>

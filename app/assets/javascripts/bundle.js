@@ -241,12 +241,10 @@ function (_React$Component) {
         className: "mainBrowseDiv"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_greeting_greeting_container__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "video"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("iframe", {
-        className: "mainVideo",
-        width: "1600",
-        height: "1000",
-        src: "https://www.youtube.com/embed/atxYe-nOa9w?controls=0&start=42",
-        allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("video", {
+        src: "https://onebucketman.s3-us-west-1.amazonaws.com/My+Hero+Academia+-+Opening+2+_+Peace+Sign+(1080p_24fps_H264-128kbit_AAC).mp4",
+        width: "250px",
+        height: "250px"
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         className: "browse-buttons"
       }, " Play"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
