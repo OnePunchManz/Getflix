@@ -1,11 +1,11 @@
-mainBrowseDiv {
-    display: flex;
+.mainBrowseDiv {
     font-family: sans-serif;
+
 }
 
 .browse-buttons {
     display: flex;
-    position: absolute; bottom: 20px;
+    position: relative; bottom: 20%; left: 35px;
     background: gray;
     color: white;
     height: 50px;
@@ -21,7 +21,7 @@ mainBrowseDiv {
 
 .browse-buttons-2 {
     display: flex;
-    position: absolute; bottom: 20px; left: 350px;
+    position: relative; bottom: 20%; left: 100px;
     background: gray;
     color: white;
     height: 50px;
@@ -37,7 +37,7 @@ mainBrowseDiv {
 
 .browse-buttons-3 {
     display: flex;
-    position: absolute; bottom: 20px; left: 175px;
+    position: relative; bottom: 20%; left: 175px;
     background: gray;
     color: white;
     height: 50px;
@@ -50,14 +50,46 @@ mainBrowseDiv {
     font-family: sans-serif;
 
 }
+
+
+.buttonPrime {
+    width: 50%;
+    display: flex; 
+    position: absolute;
+    justify-content: start;
+    flex-direction: row;
+    bottom: 16px;
+}
 .mainVideo {
     z-index: -1;
-    right: 0;
+    /* right: 0;
     left:0;
-    min-width: 0;
-    min-height: 0;
+    min-width: 100;
+    min-height: 100;
      widows: 100%;
+     height: cover;
+     width:cover;  */
+    /* background: url('images/example.jpg') no-repeat fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+ */
+   position: relative;
+   padding-bottom: 56.25%; /* 16:9 */
+	
+	height: 0;
+ 
+
 }
+
+/* .videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+} */
 
 .browse-buttons:hover {background-color: #ddd;}
 .browse-buttons-2:hover {background-color: #ddd;}
@@ -75,7 +107,7 @@ mainBrowseDiv {
 
 }
 
-.mainerDev {
+.mainerDiv {
     display: flex;
 
 }

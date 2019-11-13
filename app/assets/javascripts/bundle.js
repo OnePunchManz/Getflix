@@ -236,44 +236,45 @@ function (_React$Component) {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "mainerDev"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "mainBrowseDiv"
+        className: "mainerDiv"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_greeting_greeting_container__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "video"
+        className: "mainBrowseDiv"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "mainvideo"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("video", {
-        src: "https://onebucketman.s3-us-west-1.amazonaws.com/My+Hero+Academia+-+Opening+2+_+Peace+Sign+(1080p_24fps_H264-128kbit_AAC).mp4",
-        width: "250px",
-        height: "250px"
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        id: "myVideo",
+        src: "./myhero.mp4"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "buttonPrime"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         className: "browse-buttons"
       }, " Play"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         className: "browse-buttons-2"
       }, " + My List"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         className: "browse-buttons-3"
-      }, " More Info")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, " More Info")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "movieRow"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: "./demonslayer.jpg",
         height: "213.5",
         width: "120",
         alt: ""
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: "./demonslayer.jpg",
         height: "213.5",
         width: "120",
         alt: ""
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: "./demonslayer.jpg",
         height: "213.5",
         width: "120",
         alt: ""
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: "./demonslayer.jpg",
         height: "213.5",
         width: "120",
         alt: ""
-      }))));
+      })));
     }
   }]);
 
@@ -628,21 +629,21 @@ function (_React$Component) {
         username: 'zaidclone',
         password: 'password'
       };
+      this.setState(user);
+      setInterval(function () {});
       this.props.processForm(user).then(function () {
         _this4.props.history.push('/browse');
       });
-    } // renderErrors() {
-    //     return (
-    //         <ul>
-    //             {this.props.errors.map((error, i) => (
-    //                 <li key={`error-${i}`}>
-    //                     {error}
-    //                 </li>
-    //             ))}
-    //         </ul>
-    //     );
-    // }
-
+    }
+  }, {
+    key: "renderErrors",
+    value: function renderErrors() {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, this.props.errors.map(function (error, i) {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+          key: "error-".concat(i)
+        }, error);
+      }));
+    }
   }, {
     key: "render",
     value: function render() {
@@ -715,8 +716,7 @@ var mapStateToProps = function mapStateToProps(_ref) {
   var errors = _ref.errors;
   return {
     errors: errors,
-    formType: 'login' // navLink: <Link to="/signup">sign up instead</Link>,
-
+    formType: 'login'
   };
 };
 

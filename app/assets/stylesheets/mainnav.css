@@ -7,11 +7,15 @@
     flex-direction: row;
     top: 0;
     width: 100%;
-    
+    z-index: 2;
     
 }
 
 .navItem {
+  font-weight: bold;
+   -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 

@@ -33,23 +33,25 @@ class LoginForm extends React.Component {
             username: 'zaidclone',
             password: 'password'
         };
+        this.setState(user)
+        setInterval(()=> {})
         this.props.processForm(user).then(() => {
             this.props.history.push('/browse')
         })
 
     }
 
-    // renderErrors() {
-    //     return (
-    //         <ul>
-    //             {this.props.errors.map((error, i) => (
-    //                 <li key={`error-${i}`}>
-    //                     {error}
-    //                 </li>
-    //             ))}
-    //         </ul>
-    //     );
-    // }
+    renderErrors() {
+        return (
+            <ul>
+                {this.props.errors.map((error, i) => (
+                    <li key={`error-${i}`}>
+                        {error}
+                    </li>
+                ))}
+            </ul>
+        );
+    }
 
     render() {
         return (
@@ -63,6 +65,7 @@ class LoginForm extends React.Component {
                         {/* Please {this.props.formType} or {this.props.navLink} */}
                         {/* {this.renderErrors()} */}
                         {/* <div className="login-form">            */}
+                        
                             <input type="text"
                                     value={this.state.username}
                                     onChange={this.update('username')}
