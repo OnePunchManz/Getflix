@@ -98,3 +98,13 @@
     margin-top: 100px;
     width: 75%;
 }
+
+.sessionError {
+    
+    z-index: 2;
+    color:white;
+    /* height: 50vh; */
+    width: 50vh;
+    font-size: large;
+    font-weight: bold;
+}

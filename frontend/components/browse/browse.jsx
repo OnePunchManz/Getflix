@@ -15,7 +15,7 @@ class BrowsePage extends React.Component {
                 <div className="mainBrowseDiv">
                 <div className="mainvideo">
                 {/* <iframe className="Video"  src="https://www.youtube.com/embed/atxYe-nOa9w?controls=0&amp;start=42" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" width="560" height="760"></iframe> */}
-                        <video id="myVideo" src="./myhero.mp4"></video>
+                        <video id="myVideo" src="./myhero.mp4" autoPlay></video>
 
                         {/* <video src="https://onebucketman.s3-us-west-1.amazonaws.com/My+Hero+Academia+-+Opening+2+_+Peace+Sign+(1080p_24fps_H264-128kbit_AAC).mp4" width="250px" height="250px"></video> */}
 
@@ -35,7 +35,6 @@ class BrowsePage extends React.Component {
                    
                     
                         <img src="./demonslayer.jpg" height="213.5" width="120" alt="" />
-                   
                     
                         <img src="./demonslayer.jpg" height="213.5" width="120" alt="" />
                    

@@ -5,7 +5,9 @@
 
 .browse-buttons {
     display: flex;
-    position: relative; bottom: 20%; left: 35px;
+    position: relative;
+     /* bottom: 30%;  */
+    left: 10%;
     background: gray;
     color: white;
     height: 50px;
@@ -21,7 +23,9 @@
 
 .browse-buttons-2 {
     display: flex;
-    position: relative; bottom: 20%; left: 100px;
+    position: relative; 
+    /* bottom: 30%;  */
+    left: 30%;
     background: gray;
     color: white;
     height: 50px;
@@ -37,7 +41,9 @@
 
 .browse-buttons-3 {
     display: flex;
-    position: relative; bottom: 20%; left: 175px;
+    position: relative; 
+    /* bottom: 30%; */
+     left: 50%;
     background: gray;
     color: white;
     height: 50px;
@@ -55,7 +61,7 @@
 .buttonPrime {
     width: 50%;
     display: flex; 
-    position: absolute;
+    position: relative;
     justify-content: start;
     flex-direction: row;
     bottom: 16px;
@@ -75,9 +81,8 @@
     -o-background-size: cover;
     background-size: cover;
  */
-   position: relative;
+   position: absolute;
    padding-bottom: 56.25%; /* 16:9 */
-	
 	height: 0;
  
 
@@ -111,3 +116,4 @@
     display: flex;
 
 }
+

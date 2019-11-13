@@ -17,23 +17,27 @@ class SignUp extends React.Component {
         });
     }
 
+    componentDidMount() {
+        this.props.clearErrors()
+    }
+
     handleSubmit(e) {
         e.preventDefault();
         const user = Object.assign({}, this.state);
         this.props.processForm(user);
     }
 
-    // renderErrors() {
-    //     return (
-    //         <ul>
-    //             {this.props.errors.map((error, i) => (
-    //                 <li key={`error-${i}`}>
-    //                     {error}
-    //                 </li>
-    //             ))}
-    //         </ul>
-    //     );
-    // }
+    renderErrors() {
+        return (
+            <ul>
+                {this.props.errors.map((error, i) => (
+                    <li key={`error-${i}`}>
+                        {error}
+                    </li>
+                ))}
+            </ul>
+        );
+    }
 
     render() {
         return (
@@ -50,7 +54,7 @@ class SignUp extends React.Component {
                                 Create your account.
                             </div>
                         </div>
-                                    {/* {this.renderErrors()} */}
+                        {this.renderErrors()}
                         <div className="signup-form">
                             <div className="signup-input-user">
                                 {/* <label>Email */}

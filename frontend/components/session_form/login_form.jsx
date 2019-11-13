@@ -13,6 +13,10 @@ class LoginForm extends React.Component {
         this.login = this.login.bind(this);
     }
 
+    componentDidMount() {
+        this.props.clearErrors()
+    }
+
     update(field) {
         return e => this.setState({
             [field]: e.currentTarget.value
@@ -60,12 +64,13 @@ class LoginForm extends React.Component {
                 {/* <div className="login-form-container"> */}
                     <form onSubmit={this.handleSubmit} className="login-form-box">
                         <div className="signInMessage">
-                         Sign In
+                        Sign In    
                         </div>
-                        {/* Please {this.props.formType} or {this.props.navLink} */}
-                        {/* {this.renderErrors()} */}
+                        <ul className="sessionError">
+                       
+                        </ul>
                         {/* <div className="login-form">            */}
-                        
+
                             <input type="text"
                                     value={this.state.username}
                                     onChange={this.update('username')}
@@ -82,7 +87,7 @@ class LoginForm extends React.Component {
                             />
                             <input className="session-submit" type="submit" value="Sign In as Guest" onClick={this.login}
                              />
-
+                            {this.renderErrors()}
                             <Link className="signupLink" to="/signup" >New to Netflix? Sign up now. </Link>
                         {/* </div> */}
                     </form>
