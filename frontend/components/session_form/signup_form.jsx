@@ -49,12 +49,13 @@ class SignUp extends React.Component {
                             <div className="stepTitle"> 
                                 Sign up to start your free month 
                             </div>
-                            {/* Please {this.props.formType} or {this.props.navLink} */}
+                           
                             <div className="regFormTitle">
-                                Create your account.
+                                Create your account.    
                             </div>
+                            <div className="signupErrors">{this.renderErrors()}</div>
                         </div>
-                        {this.renderErrors()}
+                      
                         <div className="signup-form">
                             <div className="signup-input-user">
                                 {/* <label>Email */}

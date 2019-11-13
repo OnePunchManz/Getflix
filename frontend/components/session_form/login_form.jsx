@@ -87,7 +87,9 @@ class LoginForm extends React.Component {
                             />
                             <input className="session-submit" type="submit" value="Sign In as Guest" onClick={this.login}
                              />
+                             <div className="loginErrors">
                             {this.renderErrors()}
+                            </div>
                             <Link className="signupLink" to="/signup" >New to Netflix? Sign up now. </Link>
                         {/* </div> */}
                     </form>

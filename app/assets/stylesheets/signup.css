@@ -102,3 +102,9 @@
 .signInMessage {
     font-family: sans-serif;
 }
+
+.signupErrors {
+      font-family: sans-serif;
+      color: red
+
+}
