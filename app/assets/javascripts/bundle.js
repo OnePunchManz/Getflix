@@ -300,7 +300,8 @@ function (_React$Component) {
         className: "mainvideo"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("video", {
         id: "myVideo",
-        src: "./onepunch.mp4"
+        src: "./onepunch.mp4",
+        autoPlay: true
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "buttonPrime"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -379,7 +380,7 @@ function (_React$Component) {
         className: "header"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
         htmlFor: ""
-      }, "Because you watch too much anime")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, "Because you watch too much anime...")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "container"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_slick__WEBPACK_IMPORTED_MODULE_2___default.a, _extends({
         className: "carcar"

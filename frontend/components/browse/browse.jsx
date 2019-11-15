@@ -51,7 +51,7 @@ class BrowsePage extends React.Component {
                 <div className="mainBrowseDiv">
                 <div className="mainvideo">
                 {/* <iframe className="Video"  src="https://www.youtube.com/embed/atxYe-nOa9w?controls=0&amp;start=42" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" width="560" height="760"></iframe> */}
-                        <video id="myVideo" src="./onepunch.mp4" ></video>
+                        <video id="myVideo" src="./onepunch.mp4" autoPlay ></video>
                         {/* aws src="https://onebucketman-seed.s3-us-west-1.amazonaws.com/My+Hero+Academia+-+Opening+2+_+Peace+Sign+(1080p_24fps_H264-128kbit_AAC).mp4" */}
 
                         {/* <video src="https://onebucketman.s3-us-west-1.amazonaws.com/My+Hero+Academia+-+Opening+2+_+Peace+Sign+(1080p_24fps_H264-128kbit_AAC).mp4" width="250px" height="250px"></video> */}
@@ -131,7 +131,7 @@ class BrowsePage extends React.Component {
                             <div className="thumbnailHolder">
                                 <div className="header">
                                     <label  htmlFor="">
-                                        Because you watch too much anime
+                                        Because you watch too much anime...
                             </label>
                                 </div>
                                 <div>
