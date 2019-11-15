@@ -13,13 +13,12 @@ class BrowsePage extends React.Component {
             infinite: true,
             speed: 500,
             slidesToScroll: 4,
-            slidesToShow: 6,
-            adaptiveHeight: true
+            slidesToShow: 6
             
         };
         
         return(
-          <div>
+          <div className="daddyDiv">
             <div className="mainerDiv">
                 < link rel="stylesheet" type="text/css" charSet="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
                 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" /> 
@@ -48,7 +47,7 @@ class BrowsePage extends React.Component {
                     <div className="thumbnailHolder">
                         <div className="header">
                             <label htmlFor="">
-                                Title Header
+                                Shows for Weebs
                             </label>
                         </div> 
                          <div>
@@ -59,38 +58,86 @@ class BrowsePage extends React.Component {
 
                                    
                                     <div>
-                                    <img className="item" src="./onepunch.jpg"  alt="" />
+                                    <img className="item" src="./pika.jpg"  alt="" />
                                     </div>
                                 <div >
-                                    <img className="item" src="./onepunch.jpg" alt="" />
+                                    <img className="item" src="./hxh1.jpg" alt="" />
                                 </div>
                                 <div >
                                     <img className="item" src="./onepunch.jpg" alt="" />
                                 </div>
                                 <div >
-                                    <img className="item" src="./onepunch.jpg" alt="" />
+                                    <img className="item" src="./boku.png" alt="" />
                                 </div>
                                 <div >
-                                    <img className="item" src="./onepunch.jpg" alt="" />
+                                    <img className="item" src="./bebop.jpg" alt="" />
                             </div>
                                 <div >
-                                    <img className="item" src="./onepunch.jpg" alt="" />
+                                    <img className="item" src="./gintama.jpg" alt="" />
                             </div>
                             <div>
                                     <img className="item" src="./onepunch.jpg" alt="" />
                             </div>
                             <div>
-                                        <img className="item" src="./onepunch.jpg" alt="" />
+                                        <img className="item" src="./aot.jpg" alt="" />
                             </div>
                             <div>
-                                        <img className="item" src="./onepunch.jpg" alt="" />
+                                        <img className="item" src="./saiki.jpeg" alt="" />
                             </div>
                         </Slider>
                                 </div>   
                             </div>
-                           </div>
+                </div>
+                </div>
+                    <div className="movieRow2">
+                        <div className="mainSlider" >
+                            <div className="thumbnailHolder">
+                                <div className="header">
+                                    <label  htmlFor="">
+                                        Because you watch too much anime
+                            </label>
+                                </div>
+                                <div>
+
+                                    <div className="container">
+                                    </div>
+                                    <Slider className="carcar"{...settings}>
+
+
+                                        <div>
+                                            <img className="item" src="./saiki.jpeg" alt="" />
+                                        </div>
+                                        <div >
+                                        <img className="item" src="./hxh.jpg" alt="" />
+                                        </div>
+                                        <div >
+                                            <img className="item" src="./demon.jpg" alt="" />
+                                        </div>
+                                        <div >
+                                            <img className="item" src="./mob.jpg" alt="" />
+                                        </div>
+                                        <div >
+                                            <img className="item" src="./aot.jpg" alt="" />
+                                        </div>
+                                        <div >
+                                            <img className="item" src="./pika.jpg" alt="" />
+                                        </div>
+                                        <div>
+                                            <img className="item" src="./onepunch.jpg" alt="" />
+                                        </div>
+                                        <div>
+                                            <img className="item" src="./hxh1.jpg" alt="" />
+                                        </div>
+                                        <div>
+                                            <img className="item" src="./onepunch.jpg" alt="" />
+                                        </div>
+                                    </Slider>
+                                </div>
                             </div>
-                            </div>
+                        </div>
+                        </div>
+                        </div>
+                          
                    
                
            

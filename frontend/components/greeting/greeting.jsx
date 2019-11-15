@@ -50,23 +50,23 @@ class Greeting extends React.Component {
             return (
                 <div className='actualMainNav'>
                     <div className="actualNav">
-                    <img className='logo' src="/netflix.png" alt="" />
+                        <Link className="" to="/browse"><img className='logo' src="/netflix.png" alt="" /></Link>
                         {/* <div className="actualSigninNav"> */}
                         <ul className="navList">
                             <li className="navItem">
-                            <Link className="actualSignIn" to="/login">Home</Link>
+                            <Link className="actualSignIn" to="/browse">Home</Link>
                             </li>
                             <li className="navItem">
-                            <Link className="actualSignIn" to="/login">TV Shows</Link>
+                                <a className="actualSignIn" href="https://www.netflix.com/browse/genre/83">TV Shows</a>  
                             </li>
                             <li className="navItem">
-                            <Link className="actualSignIn" to="/login">Movies</Link>
+                                <a className="actualSignIn" href="https://www.netflix.com/browse/genre/34399">Movies</a>
                             </li>
                             <li className="navItem">
-                            <Link className="actualSignIn" to="/login">Recently Added</Link>
+                                <a className="actualSignIn" href="https://www.netflix.com/browse/genre/1592210">Recently Added</a>
                             </li>
                             <li className="navItem">
-                            <Link className="actualSignIn" to="/login">My List</Link>
+                                <a className="actualSignIn" href="https://www.netflix.com/browse/my-list">My List</a>
                             </li>
                         </ul>
                         {/* </div> */}
