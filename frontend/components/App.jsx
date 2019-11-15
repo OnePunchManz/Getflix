@@ -10,6 +10,7 @@ import {
 import BrowseContainer from './browse/browse_container'
 import SignUpFormContainer from './session_form/signup_form_container';
 import LogInFormContainer from './session_form/login_form_container';
+import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 const App = () => (
     <div>
@@ -18,7 +19,7 @@ const App = () => (
         </header>
         <Route path="/login" component={LogInFormContainer} />
         <Route path="/signup" component={SignUpFormContainer} />
-        <Route path="/browse" component={BrowseContainer} />
+        <ProtectedRoute path="/browse" component={BrowseContainer} />
     </div>
 );
 
