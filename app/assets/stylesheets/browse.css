@@ -2,6 +2,10 @@
    /* background-color: black; */
 }
 
+.daddyDiv{
+    background: #141414;
+}
+
 .mainBrowseDiv {
     font-family: sans-serif;
     
@@ -169,9 +173,9 @@
     font-size: 24px;
     font-weight: bold;
     text-shadow: black;
-       -webkit-text-fill-color: black; /* Will override color (regardless of order) */
+       -webkit-text-fill-color: #e5e5e5; /* Will override color (regardless of order) */
   -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color:white;
+  -webkit-text-stroke-color:#e5e5e5;
   margin-bottom: 10px;
 
 }
@@ -181,7 +185,7 @@
 } 
 
 .slick-prev:before {
-    color: black 
+    color: e5e5e5 
 } 
 
 
