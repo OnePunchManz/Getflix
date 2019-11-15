@@ -161,6 +161,55 @@ var signup = function signup(user) {
 
 /***/ }),
 
+/***/ "./frontend/actions/video_actions.js":
+/*!*******************************************!*\
+  !*** ./frontend/actions/video_actions.js ***!
+  \*******************************************/
+/*! exports provided: RECEIVE_VIDEOS, RECEIVE_VIDEO, receiveVideos, receiveVideo, fetchVideos, fetchVideo */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_VIDEOS", function() { return RECEIVE_VIDEOS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_VIDEO", function() { return RECEIVE_VIDEO; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveVideos", function() { return receiveVideos; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveVideo", function() { return receiveVideo; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchVideos", function() { return fetchVideos; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchVideo", function() { return fetchVideo; });
+/* harmony import */ var _util_video_api_util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../util/video_api_util */ "./frontend/util/video_api_util.js");
+
+var RECEIVE_VIDEOS = 'RECEIVE_VIDEOS';
+var RECEIVE_VIDEO = 'RECEIVE_VIDEO';
+var receiveVideos = function receiveVideos(videos) {
+  return {
+    type: RECEIVE_VIDEOS,
+    videos: videos
+  };
+};
+var receiveVideo = function receiveVideo(_ref) {
+  var title = _ref.title;
+  return {
+    type: RECEIVE_VIDEO,
+    title: title
+  };
+};
+var fetchVideos = function fetchVideos() {
+  return function (dispatch) {
+    return _util_video_api_util__WEBPACK_IMPORTED_MODULE_0__["fetchVideos"]().then(function (vidoes) {
+      return dispatch(receiveVideos(vidoes));
+    });
+  };
+};
+var fetchVideo = function fetchVideo(id) {
+  return function (dispatch) {
+    return _util_video_api_util__WEBPACK_IMPORTED_MODULE_0__["fetchVideo"](id).then(function (payload) {
+      return dispatch(receiveVideo(payload));
+    });
+  };
+};
+
+/***/ }),
+
 /***/ "./frontend/components/app.jsx":
 /*!*************************************!*\
   !*** ./frontend/components/app.jsx ***!
@@ -448,7 +497,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var mSTP = function mSTP(state) {
-  return {};
+  return {
+    user: state.user,
+    videos: state.videos
+  };
 };
 
 var mDTP = function mDTP(dispatch) {
@@ -1169,16 +1221,19 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
 /* harmony import */ var _entities_reducer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./entities_reducer */ "./frontend/reducers/entities_reducer.js");
-/* harmony import */ var _session_reducer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./session_reducer */ "./frontend/reducers/session_reducer.js");
-/* harmony import */ var _errors_reducers__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./errors_reducers */ "./frontend/reducers/errors_reducers.js");
+/* harmony import */ var _videos_reducer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./videos_reducer */ "./frontend/reducers/videos_reducer.js");
+/* harmony import */ var _session_reducer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./session_reducer */ "./frontend/reducers/session_reducer.js");
+/* harmony import */ var _errors_reducers__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./errors_reducers */ "./frontend/reducers/errors_reducers.js");
+
 
 
 
 
 var rootReducer = Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])({
   entities: _entities_reducer__WEBPACK_IMPORTED_MODULE_1__["default"],
-  session: _session_reducer__WEBPACK_IMPORTED_MODULE_2__["default"],
-  errors: _errors_reducers__WEBPACK_IMPORTED_MODULE_3__["default"]
+  session: _session_reducer__WEBPACK_IMPORTED_MODULE_3__["default"],
+  errors: _errors_reducers__WEBPACK_IMPORTED_MODULE_4__["default"],
+  videos: _videos_reducer__WEBPACK_IMPORTED_MODULE_2__["default"]
 });
 /* harmony default export */ __webpack_exports__["default"] = (rootReducer);
 
@@ -1282,6 +1337,43 @@ var usersReducer = function usersReducer() {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (usersReducer);
+
+/***/ }),
+
+/***/ "./frontend/reducers/videos_reducer.js":
+/*!*********************************************!*\
+  !*** ./frontend/reducers/videos_reducer.js ***!
+  \*********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _actions_video_actions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions/video_actions */ "./frontend/actions/video_actions.js");
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+var videosReducer = function videosReducer() {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  var action = arguments.length > 1 ? arguments[1] : undefined;
+  Object.freeze(state);
+
+  switch (action.type) {
+    case _actions_video_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_VIDEOS"]:
+      return action.videos;
+
+    case _actions_video_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_VIDEO"]:
+      var newVideo = _defineProperty({}, action.video.id, action.video);
+
+      return Object.assign({}, state, newVideo);
+
+    default:
+      return state;
+  }
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (videosReducer);
 
 /***/ }),
 
@@ -1409,6 +1501,33 @@ var logout = function logout() {
   return $.ajax({
     method: 'DELETE',
     url: '/api/session'
+  });
+};
+
+/***/ }),
+
+/***/ "./frontend/util/video_api_util.js":
+/*!*****************************************!*\
+  !*** ./frontend/util/video_api_util.js ***!
+  \*****************************************/
+/*! exports provided: fetchVideos, fetchVideo */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchVideos", function() { return fetchVideos; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchVideo", function() { return fetchVideo; });
+var fetchVideos = function fetchVideos() {
+  return $.ajax({
+    method: 'GET',
+    url: 'api/video',
+    data: data
+  });
+};
+var fetchVideo = function fetchVideo(id) {
+  return $.ajax({
+    method: 'GET',
+    url: "api/video/".concat(id)
   });
 };
 

@@ -1,4 +1,5 @@
-json.array! @videos do |video|
-json.extract! video, :id, :title
-json.photoUrl url_for(video.movie)
+@videos.each do |video|
+  json.set! video.id do
+    json.partial! 'video', video: video
+  end
 end
