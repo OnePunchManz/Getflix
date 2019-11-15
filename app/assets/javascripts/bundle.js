@@ -257,7 +257,29 @@ function (_React$Component) {
         infinite: true,
         speed: 500,
         slidesToScroll: 4,
-        slidesToShow: 6
+        slidesToShow: 6,
+        responsive: [{
+          breakpoint: 800,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            infinite: true,
+            dots: true
+          }
+        }, {
+          breakpoint: 500,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            initialSlide: 2
+          }
+        }, {
+          breakpoint: 240,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }]
       };
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "daddyDiv"
@@ -278,8 +300,7 @@ function (_React$Component) {
         className: "mainvideo"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("video", {
         id: "myVideo",
-        src: "./onepunch.mp4",
-        autoPlay: true
+        src: "./onepunch.mp4"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "buttonPrime"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -288,11 +309,17 @@ function (_React$Component) {
         alt: ""
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         className: "browse-buttons"
-      }, " Play"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "browse-buttons-container"
+      }, "Play")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         className: "browse-buttons-2"
-      }, " + My List"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "browse-buttons-container"
+      }, "+ My List")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         className: "browse-buttons-3"
-      }, " More Info"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "browse-buttons-container"
+      }, "More Info")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "movieRow"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "mainSlider"
@@ -378,7 +405,7 @@ function (_React$Component) {
         alt: ""
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "item",
-        src: "./pika.jpg",
+        src: "./one.jpg",
         alt: ""
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "item",

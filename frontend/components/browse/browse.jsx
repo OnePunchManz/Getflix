@@ -13,8 +13,33 @@ class BrowsePage extends React.Component {
             infinite: true,
             speed: 500,
             slidesToScroll: 4,
-            slidesToShow: 6
-            
+            slidesToShow: 6,
+            responsive: [
+                {
+                    breakpoint: 800,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3,
+                        infinite: true,
+                        dots: true
+                    }
+                },
+                {
+                    breakpoint: 500,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2,
+                        initialSlide: 2
+                    }
+                },
+                {
+                    breakpoint: 240,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
         };
         
         return(
@@ -26,7 +51,7 @@ class BrowsePage extends React.Component {
                 <div className="mainBrowseDiv">
                 <div className="mainvideo">
                 {/* <iframe className="Video"  src="https://www.youtube.com/embed/atxYe-nOa9w?controls=0&amp;start=42" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" width="560" height="760"></iframe> */}
-                        <video id="myVideo" src="./onepunch.mp4" autoPlay ></video>
+                        <video id="myVideo" src="./onepunch.mp4" ></video>
                         {/* aws src="https://onebucketman-seed.s3-us-west-1.amazonaws.com/My+Hero+Academia+-+Opening+2+_+Peace+Sign+(1080p_24fps_H264-128kbit_AAC).mp4" */}
 
                         {/* <video src="https://onebucketman.s3-us-west-1.amazonaws.com/My+Hero+Academia+-+Opening+2+_+Peace+Sign+(1080p_24fps_H264-128kbit_AAC).mp4" width="250px" height="250px"></video> */}
@@ -34,9 +59,21 @@ class BrowsePage extends React.Component {
                 
                 <div className="buttonPrime">
                 <img className="browse-logo" src="/onepunchlogo.png" alt=""/>
-                <button className="browse-buttons"> Play</button>
-                <button className="browse-buttons-2"> + My List</button>
-                <button className="browse-buttons-3"> More Info</button>
+                <button className="browse-buttons"> 
+                    <div className="browse-buttons-container">
+                        Play
+                    </div>
+                </button>
+                <button className="browse-buttons-2"> 
+                                    <div className="browse-buttons-container">
+                        + My List
+                    </div>
+                </button>
+                <button className="browse-buttons-3"> 
+                                    <div className="browse-buttons-container">
+                        More Info
+                    </div>
+                </button>
                 </div>
                
                 </div>
@@ -120,7 +157,7 @@ class BrowsePage extends React.Component {
                                             <img className="item" src="./aot.jpg" alt="" />
                                         </div>
                                         <div >
-                                            <img className="item" src="./pika.jpg" alt="" />
+                                            <img className="item" src="./one.jpg" alt="" />
                                         </div>
                                         <div>
                                             <img className="item" src="./onepunch.jpg" alt="" />
