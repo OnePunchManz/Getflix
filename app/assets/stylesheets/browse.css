@@ -1,5 +1,5 @@
 .mainerDiv {
-    background-color: dimgrey;
+    /* background-color: dimgrey; */
 }
 
 .mainBrowseDiv {
@@ -23,6 +23,26 @@
     font-size: 17px;
     z-index: 1;
     font-family: sans-serif;
+
+}
+
+.browse-logo {
+    background-color: transparent;
+    display: flex;
+    position: absolute;
+     /* bottom: 30%;  */
+    left: 10%;
+    bottom: 60%;
+   
+    /* height: 50px;
+    width: 100px; */
+    opacity: .8;
+    border-radius: 5px;
+    font-weight: normal;
+    font-size: 17px;
+    z-index: 1;
+    font-family: sans-serif;
+    width: 80%;
 
 }
 
@@ -70,6 +90,7 @@
     justify-content: start;
     flex-direction: row;
     bottom: 175px;
+     background-color: transparent;
 
 }
 .mainVideo {
@@ -107,7 +128,6 @@
 .browse-buttons-3:hover {background-color: #ddd;}
 
 .movieRow {
-    margin-top: 670px;
     position: absolute;
     display: flex;
     flex-direction: row;
@@ -115,8 +135,6 @@
     height: 250px;
     /* z-index: 2; */
     justify-content: space-evenly;
-    background-color: dimgrey;
-
 }
 
 .mainerDiv {
@@ -125,24 +143,29 @@
 }
 
 .thumbnails {
-    z-index: 3;
+    
     padding: 3px;
 }
 
 .carcar {
-    max-width: 1240px;
-    width:  100%;
-    height: 125px;
-    z-index: 3;
+    max-width: 1640px;
+    /* width:  100%; */
+    /* height: 125px; */
+   
+    
+   
 }
 
-/* .slick-next:before {
+.slick-next:before {
     color: black !important;
-} */
+}
 
 .container {
   display: flex;
+    width: 1220px;
   padding: 0 55px;
+  flex-direction: row;
+ 
 }
 
 .item {
@@ -151,18 +174,20 @@
   text-align: center;
   margin: 0 2px;
   transition: transform 300ms ease 100ms;
+ 
 }
 
 .container:hover .item {
-   transform: translateX(-25%);
+   transform: translateX(-25%) 
 }
 
 .item:hover ~ .item {
-   transform: translateX(25%);
+   transform: translateX(25%) 
 }
 
 .item:hover {
   transform: scale(1.5) !important;
+ 
 }
 
 .content {
@@ -171,16 +196,12 @@
   position: relative;
 }
 
-.notbackground {
+/* .notbackground {
   display: flex;
   height: 100%;
-}
+} */
+/* 
 
-.left {
-  background: black;
-  width: 30%;
-  position: relative;
-}
 
 .left:before {
   content: '';
@@ -189,15 +210,15 @@
   top: 0;
   bottom: 0;
   left: 100%;
-  width: 275px;
+  width: 25px;
 }
-
+/* 
 .right {
   background: green;
   width: 70%;
-}
+} */
 
-.content-container {
+/* .content-container {
   color: white;
   position: absolute;
   top: 0;
@@ -205,5 +226,5 @@
   right: 0;
   bottom: 0;
   padding: 30px
-}
+} */
 

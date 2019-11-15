@@ -257,9 +257,10 @@ function (_React$Component) {
         infinite: true,
         speed: 500,
         slidesToScroll: 4,
-        slidesToShow: 6
+        slidesToShow: 6,
+        adaptiveHeight: true
       };
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "mainerDiv"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("link", {
         rel: "stylesheet",
@@ -276,16 +277,21 @@ function (_React$Component) {
         className: "mainvideo"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("video", {
         id: "myVideo",
-        src: "./myhero.mp4"
+        src: "./onepunch.mp4",
+        autoPlay: true
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "buttonPrime"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "browse-logo",
+        src: "/onepunchlogo.png",
+        alt: ""
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         className: "browse-buttons"
       }, " Play"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         className: "browse-buttons-2"
       }, " + My List"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         className: "browse-buttons-3"
-      }, " More Info")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, " More Info"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "movieRow"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "mainSlider"
@@ -295,45 +301,44 @@ function (_React$Component) {
         className: "header"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
         htmlFor: ""
-      }, "Title Header")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_slick__WEBPACK_IMPORTED_MODULE_2___default.a, _extends({
+      }, "Title Header")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "container"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_slick__WEBPACK_IMPORTED_MODULE_2___default.a, _extends({
         className: "carcar"
       }, settings), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "item",
         src: "./onepunch.jpg",
         alt: ""
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        "class": "item",
+        className: "item",
         src: "./onepunch.jpg",
         alt: ""
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        "class": "item",
+        className: "item",
         src: "./onepunch.jpg",
         alt: ""
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        "class": "item",
+        className: "item",
         src: "./onepunch.jpg",
         alt: ""
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        "class": "item",
+        className: "item",
         src: "./onepunch.jpg",
         alt: ""
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        "class": "item",
+        className: "item",
         src: "./onepunch.jpg",
         alt: ""
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        "class": "item",
+        className: "item",
         src: "./onepunch.jpg",
         alt: ""
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        "class": "item",
+        className: "item",
         src: "./onepunch.jpg",
         alt: ""
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        "class": "item",
-        src: "./onepunch.jpg",
-        alt: ""
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        "class": "item",
+        className: "item",
         src: "./onepunch.jpg",
         alt: ""
       }))))))));
