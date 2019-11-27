@@ -76,8 +76,6 @@ class Greeting extends React.Component {
                             <button className="dropbtn"><img src="https://occ-0-2218-2219.1.nflxso.net/art/65b1d/4b57a37098753aff58d937d5a138c9753e465b1d.png" alt=""/></button>
                             <div className="dropdown-content">
                                 <a href="#">Manage Profiles</a>
-                                {/* <a href="#">Account</a>
-                                <a href="#">Help Center</a> */}
                                 <a href="/#/login" onClick={this.props.logout} >Sign out of Netflix</a>
                             </div>
                         </div>
