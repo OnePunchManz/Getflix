@@ -3,6 +3,7 @@ import GreetingContainer from '../greeting/greeting_container'
 import Slider from "react-slick";
 
 
+
 class BrowsePage extends React.Component {
 
 
