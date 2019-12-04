@@ -550,25 +550,29 @@ function (_React$Component) {
   _inherits(Greeting, _React$Component);
 
   function Greeting(props) {
+    var _this;
+
     _classCallCheck(this, Greeting);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(Greeting).call(this, props));
-  } //  sessionLinks = () => (
-  //     <nav className="login-signup">
-  //         <Link to="/login">Signin</Link>
-  //         &nbsp;or&nbsp;
-  //   <Link to="/signup">Sign up!</Link>
-  //     </nav>
-  // );
-  //  personalGreeting = () => (
-  //     <hgroup className="header-group">
-  //         <h2 className="header-name">Hi, {currentUser.username}!</h2>
-  //         <button className="header-button" onClick={logout}>Log Out</button>
-  //     </hgroup>
-  // );
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(Greeting).call(this, props));
 
+    window.onscroll = function () {
+      myFunction();
+    };
+
+    return _this;
+  }
 
   _createClass(Greeting, [{
+    key: "myFunction",
+    value: function myFunction() {
+      if (document.body.scrollTop > 5 || document.documentElement.scrollTop > 5) {
+        document.getElementById("fixedMenu").className = "actualMainNav-box-shadow";
+      } else {
+        document.getElementById("fixedMenu").className = "actualMainNav";
+      }
+    }
+  }, {
     key: "render",
     value: function render() {
       if (this.props.location.pathname === '/signup') {
@@ -606,7 +610,8 @@ function (_React$Component) {
         })));
       } else if (this.props.location.pathname === '/browse') {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-          className: "actualMainNav"
+          className: "actualMainNav",
+          id: "fixedmenu"
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "actualNav"
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {

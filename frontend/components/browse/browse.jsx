@@ -66,17 +66,16 @@ class BrowsePage extends React.Component {
                     </div>
                 </button>
                 <button className="browse-buttons-2"> 
-                                    <div className="browse-buttons-container">
+                    <div className="browse-buttons-container">
                         + My List
                     </div>
                 </button>
                 <button className="browse-buttons-3"> 
-                                    <div className="browse-buttons-container">
+                        <div className="browse-buttons-container">
                         More Info
                     </div>
                 </button>
                 </div>
-               
                 </div>
             </div>
             </div>

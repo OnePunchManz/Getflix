@@ -4,22 +4,23 @@ import { Link } from 'react-router-dom';
 class Greeting extends React.Component {
     constructor(props){
         super(props)
+        window.onscroll = function() {
+          myFunction();
+        };
     }
+    
+
+  myFunction() {
+    if (document.body.scrollTop > 5 || document.documentElement.scrollTop > 5) {
+        document.getElementById("fixedMenu").className =
+          "actualMainNav-box-shadow";
+    } else {
+        document.getElementById("fixedMenu").className = "actualMainNav";
+    }
+}
 
 
-    //  sessionLinks = () => (
-    //     <nav className="login-signup">
-    //         <Link to="/login">Signin</Link>
-    //         &nbsp;or&nbsp;
-    //   <Link to="/signup">Sign up!</Link>
-    //     </nav>
-    // );
-    //  personalGreeting = () => (
-    //     <hgroup className="header-group">
-    //         <h2 className="header-name">Hi, {currentUser.username}!</h2>
-    //         <button className="header-button" onClick={logout}>Log Out</button>
-    //     </hgroup>
-    // );
+   
     render() {
 
         if (this.props.location.pathname === '/signup') {
@@ -48,7 +49,7 @@ class Greeting extends React.Component {
         }
         else if (this.props.location.pathname === '/browse'){
             return (
-                <div className='actualMainNav'>
+                <div className='actualMainNav' id="fixedmenu">
                     <div className="actualNav">
                         <Link className="" to="/browse"><img className='logo' src="/netflix.png" alt="" /></Link>
                         {/* <div className="actualSigninNav"> */}

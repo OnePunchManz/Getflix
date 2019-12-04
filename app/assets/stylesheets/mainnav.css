@@ -11,6 +11,21 @@
     
 }
 
+.actualMainNav-box-shadow{
+    display:flex;
+    justify-content: space-between;
+    height: 30px;
+  
+    position: fixed;
+    flex-direction: row;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+ 
+background-color: orange;
+  
+}
+
 .navItem {
   font-weight: bold;
    -webkit-text-fill-color: white; /* Will override color (regardless of order) */
@@ -18,6 +33,8 @@
   -webkit-text-stroke-color: black;
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
+
+
 
 .navList{
   display: flex;
