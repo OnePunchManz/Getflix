@@ -1,4 +1,3 @@
-debugger
 export const fetchVideos = () => (
     $.ajax({
         method: 'GET',

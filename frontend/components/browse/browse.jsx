@@ -1,6 +1,7 @@
 import React from 'react';
 import GreetingContainer from '../greeting/greeting_container'
 import Slider from "react-slick";
+import { Link } from 'react-router-dom';
 
 
 
@@ -8,6 +9,7 @@ class BrowsePage extends React.Component {
 
     componentDidMount(){
         this.props.fetchVideos()
+        this.props.fetchVideo()
     }
 
     render(){
@@ -63,8 +65,9 @@ class BrowsePage extends React.Component {
                 <img className="browse-logo" src="/onepunchlogo.png" alt=""/>
                 <button className="browse-buttons"> 
                     <div className="browse-buttons-container">
-                    
+                    <Link to={`/videos/${video.id}`}>
                     Play 
+                    </Link>
                     </div>
                 </button>
                 <button className="browse-buttons-2"> 
