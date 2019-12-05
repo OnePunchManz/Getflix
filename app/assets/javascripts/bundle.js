@@ -180,6 +180,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var RECEIVE_VIDEOS = 'RECEIVE_VIDEOS';
 var RECEIVE_VIDEO = 'RECEIVE_VIDEO';
+debugger;
 var receiveVideos = function receiveVideos(videos) {
   return {
     type: RECEIVE_VIDEOS,
@@ -187,16 +188,17 @@ var receiveVideos = function receiveVideos(videos) {
   };
 };
 var receiveVideo = function receiveVideo(_ref) {
-  var title = _ref.title;
+  var video = _ref.video;
   return {
     type: RECEIVE_VIDEO,
-    title: title
+    video: video
   };
 };
 var fetchVideos = function fetchVideos() {
   return function (dispatch) {
-    return _util_video_api_util__WEBPACK_IMPORTED_MODULE_0__["fetchVideos"]().then(function (vidoes) {
-      return dispatch(receiveVideos(vidoes));
+    return _util_video_api_util__WEBPACK_IMPORTED_MODULE_0__["fetchVideos"]().then(function (videos) {
+      debugger;
+      return dispatch(receiveVideos(videos));
     });
   };
 };
@@ -207,6 +209,7 @@ var fetchVideo = function fetchVideo(id) {
     });
   };
 };
+debugger;
 
 /***/ }),
 
@@ -302,6 +305,11 @@ function (_React$Component) {
   }
 
   _createClass(BrowsePage, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      this.props.fetchVideos();
+    }
+  }, {
     key: "render",
     value: function render() {
       var settings = {
@@ -493,6 +501,8 @@ function (_React$Component) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _browse__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./browse */ "./frontend/components/browse/browse.jsx");
+/* harmony import */ var _actions_video_actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../actions/video_actions */ "./frontend/actions/video_actions.js");
+
 
 
 
@@ -504,7 +514,14 @@ var mSTP = function mSTP(state) {
 };
 
 var mDTP = function mDTP(dispatch) {
-  return {};
+  return {
+    fetchVideo: function fetchVideo(id) {
+      return dispatch(Object(_actions_video_actions__WEBPACK_IMPORTED_MODULE_2__["fetchVideo"])(id));
+    },
+    fetchVideos: function fetchVideos() {
+      return dispatch(Object(_actions_video_actions__WEBPACK_IMPORTED_MODULE_2__["fetchVideos"])());
+    }
+  };
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_0__["connect"])(mSTP, mDTP)(_browse__WEBPACK_IMPORTED_MODULE_1__["default"]));
@@ -550,29 +567,12 @@ function (_React$Component) {
   _inherits(Greeting, _React$Component);
 
   function Greeting(props) {
-    var _this;
-
     _classCallCheck(this, Greeting);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(Greeting).call(this, props));
-
-    window.onscroll = function () {
-      myFunction();
-    };
-
-    return _this;
+    return _possibleConstructorReturn(this, _getPrototypeOf(Greeting).call(this, props));
   }
 
   _createClass(Greeting, [{
-    key: "myFunction",
-    value: function myFunction() {
-      if (document.body.scrollTop > 5 || document.documentElement.scrollTop > 5) {
-        document.getElementById("fixedMenu").className = "actualMainNav-box-shadow";
-      } else {
-        document.getElementById("fixedMenu").className = "actualMainNav";
-      }
-    }
-  }, {
     key: "render",
     value: function render() {
       if (this.props.location.pathname === '/signup') {
@@ -1144,7 +1144,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _store_store__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./store/store */ "./frontend/store/store.js");
 /* harmony import */ var _components_root__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/root */ "./frontend/components/root.jsx");
+/* harmony import */ var _actions_video_actions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./actions/video_actions */ "./frontend/actions/video_actions.js");
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 
 
 
@@ -1366,6 +1368,7 @@ var videosReducer = function videosReducer() {
 
   switch (action.type) {
     case _actions_video_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_VIDEOS"]:
+      debugger;
       return action.videos;
 
     case _actions_video_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_VIDEO"]:
@@ -1522,17 +1525,17 @@ var logout = function logout() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchVideos", function() { return fetchVideos; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchVideo", function() { return fetchVideo; });
+debugger;
 var fetchVideos = function fetchVideos() {
   return $.ajax({
     method: 'GET',
-    url: 'api/video',
-    data: data
+    url: '/api/videos'
   });
 };
 var fetchVideo = function fetchVideo(id) {
   return $.ajax({
     method: 'GET',
-    url: "api/video/".concat(id)
+    url: "/api/videos/".concat(id)
   });
 };
 

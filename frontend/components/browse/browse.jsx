@@ -6,7 +6,9 @@ import Slider from "react-slick";
 
 class BrowsePage extends React.Component {
 
-
+    componentDidMount(){
+        this.props.fetchVideos()
+    }
 
     render(){
        
@@ -51,7 +53,6 @@ class BrowsePage extends React.Component {
                 <GreetingContainer /> 
                 <div className="mainBrowseDiv">
                 <div className="mainvideo">
-                {/* <iframe className="Video"  src="https://www.youtube.com/embed/atxYe-nOa9w?controls=0&amp;start=42" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" width="560" height="760"></iframe> */}
                         <video id="myVideo" src="./onepunch.mp4" autoPlay ></video>
                         {/* aws src="https://onebucketman-seed.s3-us-west-1.amazonaws.com/My+Hero+Academia+-+Opening+2+_+Peace+Sign+(1080p_24fps_H264-128kbit_AAC).mp4" */}
 
@@ -62,7 +63,8 @@ class BrowsePage extends React.Component {
                 <img className="browse-logo" src="/onepunchlogo.png" alt=""/>
                 <button className="browse-buttons"> 
                     <div className="browse-buttons-container">
-                        Play
+                    
+                    Play 
                     </div>
                 </button>
                 <button className="browse-buttons-2"> 

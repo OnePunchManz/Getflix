@@ -9,6 +9,7 @@ const videosReducer = (state = {}, action) => {
     Object.freeze(state)
     switch (action.type) {
         case RECEIVE_VIDEOS:
+            debugger
             return action.videos;
         case RECEIVE_VIDEO:
             const newVideo = { [action.video.id]: action.video };

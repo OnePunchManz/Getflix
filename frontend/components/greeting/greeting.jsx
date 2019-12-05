@@ -4,20 +4,9 @@ import { Link } from 'react-router-dom';
 class Greeting extends React.Component {
     constructor(props){
         super(props)
-        window.onscroll = function() {
-          myFunction();
-        };
     }
     
 
-  myFunction() {
-    if (document.body.scrollTop > 5 || document.documentElement.scrollTop > 5) {
-        document.getElementById("fixedMenu").className =
-          "actualMainNav-box-shadow";
-    } else {
-        document.getElementById("fixedMenu").className = "actualMainNav";
-    }
-}
 
 
    

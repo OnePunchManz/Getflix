@@ -1,14 +1,15 @@
+debugger
 export const fetchVideos = () => (
     $.ajax({
         method: 'GET',
-        url: 'api/video',
-        data
+        url: '/api/videos',
+        
     })
 );
 
 export const fetchVideo = id => (
     $.ajax({
         method: 'GET',
-        url: `api/video/${id}`
+        url: `/api/videos/${id}`
     })
 );

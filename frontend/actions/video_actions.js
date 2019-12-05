@@ -3,20 +3,24 @@ import * as APIUtil from '../util/video_api_util';
 export const RECEIVE_VIDEOS = 'RECEIVE_VIDEOS';
 export const RECEIVE_VIDEO = 'RECEIVE_VIDEO';
 
+debugger
 export const receiveVideos = videos => ({
     type: RECEIVE_VIDEOS,
     videos,
 });
 
-export const receiveVideo = ({ title }) => ({
+
+export const receiveVideo = ({ video }) => ({
     type: RECEIVE_VIDEO,
-    title,
+    video,
 });
 
 export const fetchVideos = () => dispatch => (
-    APIUtil.fetchVideos().then(vidoes => (
-        dispatch(receiveVideos(vidoes))
-    ))
+    APIUtil.fetchVideos().then(videos => {
+        debugger;
+        return dispatch(receiveVideos(videos))
+    }
+    )
 );
 
 export const fetchVideo = id => dispatch => (
@@ -24,3 +28,4 @@ export const fetchVideo = id => dispatch => (
         dispatch(receiveVideo(payload))
     ))
 );
+debugger
