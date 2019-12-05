@@ -1,14 +1,13 @@
 import { connect } from 'react-redux';
-import BrowsePage from './browse'
+import VideoShow from './video_show'
 import { fetchVideos, fetchVideo } from '../../actions/video_actions';
 
-const mSTP = state => ({
-    video: state.video
+const mSTP = (state, ownProps) => ({
+    video: state.videos[ownProps.match.params.videoId],
 })
 
 const mDTP = dispatch => ({
     fetchVideo: (id) => dispatch(fetchVideo(id)),
-    fetchVideos: () => dispatch(fetchVideos())
 })
 
 export default connect(mSTP, mDTP)(VideoShow)

@@ -65,7 +65,7 @@ class BrowsePage extends React.Component {
                 <img className="browse-logo" src="/onepunchlogo.png" alt=""/>
                 <button className="browse-buttons"> 
                     <div className="browse-buttons-container">
-                    <Link to={`/videos/${video.id}`}>
+                    <Link to={`/videos/${this.props.videos.id}`}>
                     Play 
                     </Link>
                     </div>
