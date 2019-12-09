@@ -65,7 +65,7 @@ class BrowsePage extends React.Component {
                 <img className="browse-logo" src="/onepunchlogo.png" alt=""/>
                 <button className="browse-buttons"> 
                     <div className="browse-buttons-container">
-                    <Link to={`/videos/${this.props.videos.id}`}>
+                    <Link to={`/videos/1`}>
                     Play 
                     </Link>
                     </div>
@@ -84,14 +84,14 @@ class BrowsePage extends React.Component {
                 </div>
             </div>
             </div>
-             <div className="movieRow">
-                    <div className="mainSlider" >
-                    <div className="thumbnailHolder">
                         <div className="header">
                             <label htmlFor="">
                                 Shows for Weebs
                             </label>
                         </div> 
+             <div className="movieRow">
+                    <div className="mainSlider" >
+                    <div className="thumbnailHolder">
                          <div>
                                 
                                 <div className="container">
@@ -131,14 +131,15 @@ class BrowsePage extends React.Component {
                             </div>
                 </div>
                 </div>
+                    <div className="header">
+                        <label htmlFor="">
+                            Because you watch too much anime...
+                            </label>
+                    </div>
                     <div className="movieRow2">
                         <div className="mainSlider" >
                             <div className="thumbnailHolder">
-                                <div className="header">
-                                    <label  htmlFor="">
-                                        Because you watch too much anime...
-                            </label>
-                                </div>
+                               
                                 <div>
 
                                     <div className="container">

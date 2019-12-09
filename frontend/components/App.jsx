@@ -19,11 +19,11 @@ const App = () => (
         <header>
         {/* <GreetingContainer /> */}
         </header>
+        <Route exact path="/" component={LogInFormContainer} />
         <Route path="/login" component={LogInFormContainer} />
         <Route path="/signup" component={SignUpFormContainer} />
         <ProtectedRoute path="/browse" component={BrowseContainer} />
-        <Route exact path="/" component={BrowseContainer} />
-        <Route exact path="/videos/:videoId" component={VideoContainer} />
+        <ProtectedRoute exact path="/videos/:videoId" component={VideoContainer} />
     </div>
 );
 

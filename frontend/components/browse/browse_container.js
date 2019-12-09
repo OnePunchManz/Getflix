@@ -4,7 +4,7 @@ import { fetchVideos, fetchVideo } from '../../actions/video_actions';
 
 const mSTP = state => ({
     user: state.user,
-    videos: state.videos
+    videos: Object.values(state.videos),
 })
 
 const mDTP = dispatch => ({

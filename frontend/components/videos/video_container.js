@@ -3,7 +3,8 @@ import VideoShow from './video_show'
 import { fetchVideos, fetchVideo } from '../../actions/video_actions';
 
 const mSTP = (state, ownProps) => ({
-    video: state.videos[ownProps.match.params.videoId],
+    videoId: ownProps.match.params.videoId, 
+    videos: state.videos,
 })
 
 const mDTP = dispatch => ({
