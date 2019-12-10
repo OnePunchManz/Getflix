@@ -140,6 +140,15 @@
 	height: 100%;
 } */
 
+#onep:hover {
+    background-color:floralwhite;
+    -webkit-text-fill-color: black; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: .3px;
+  -webkit-text-stroke-color: black;
+    opacity: .9;
+    transform: scale(1.15) !important;
+}
+
 .browse-buttons:hover {
     background-color:floralwhite;
     -webkit-text-fill-color: black; /* Will override color (regardless of order) */
