@@ -383,6 +383,7 @@ function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "browse-buttons-container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+        id: "onep",
         to: "/videos/1"
       }, "Play"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         className: "browse-buttons-2"

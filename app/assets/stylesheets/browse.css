@@ -94,7 +94,9 @@
 
 }
 
-
+#onep {
+  color: white;
+}
 .buttonPrime {
     
     width: 50%;
@@ -104,6 +106,7 @@
     flex-direction: row;
     bottom: 175px;
     background-color: transparent;
+     color: white;
 
 }
 .mainVideo {
