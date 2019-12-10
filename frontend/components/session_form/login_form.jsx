@@ -60,6 +60,7 @@ class LoginForm extends React.Component {
 
     render() {
         return (
+            <div className="mainSplashDiv">
             <div className="background">
                 <GreetingContainer /> 
                 {/* <div className="login-form-container"> */}
@@ -95,6 +96,8 @@ class LoginForm extends React.Component {
                         {/* </div> */}
                     </form>
                 {/* </div> */}
+            </div>
+            <div className="footer"></div>
             </div>
         );
     }

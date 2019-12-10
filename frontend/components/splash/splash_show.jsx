@@ -7,6 +7,8 @@ class ShowShow extends React.Component {
    
     render() {
         return (
+            <div className="mainSplashDiv">
+                <div className="shadow">
             <div className="background-splash">
                 < GreetingContainer />
                     <div className="text">
@@ -22,6 +24,10 @@ class ShowShow extends React.Component {
                     <h3>Watch anywhere. Cancel anytime</h3>
                     </div>
                 </div>
+            </div>
+            </div>
+           
+            <div className="footer"></div>
             </div>
         )
 
