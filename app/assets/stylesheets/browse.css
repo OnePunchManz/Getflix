@@ -1,3 +1,4 @@
+
 .mainerDiv {
    /* background-color: black; */
 }
@@ -7,7 +8,7 @@
 }
 
 .mainBrowseDiv {
-    font-family: sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     
 
 }
@@ -29,7 +30,7 @@
     font-weight: normal;
     font-size: 17px;
     z-index: 1;
-    font-family: sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     justify-content: center;
     text-decoration: none;
 
@@ -50,7 +51,7 @@
     font-weight: normal;
     font-size: 17px;
     z-index: 1;
-    font-family: sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     width: 80%;
     justify-content: center;
 
@@ -70,7 +71,7 @@
     font-weight: normal;
     font-size: 17px;
     z-index: 1;
-    font-family: sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     justify-content: center;
 
 }
@@ -89,15 +90,12 @@
     font-weight: bold;
     font-size: 17px;
     z-index: 1;
-    font-family: sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     justify-content: center;
 
 }
 
-#onep {
-  color: white;
-  text-decoration: none;
-}
+ 
 .buttonPrime {
     
     width: 50%;
@@ -107,7 +105,7 @@
     flex-direction: row;
     bottom: 175px;
     background-color: transparent;
-     color: white;
+     color: white
 
 }
 .mainVideo {
@@ -140,23 +138,15 @@
 	height: 100%;
 } */
 
-#onep:hover {
-    background-color:floralwhite;
-    -webkit-text-fill-color: black; /* Will override color (regardless of order) */
-  -webkit-text-stroke-width: .3px;
-  -webkit-text-stroke-color: black;
-    opacity: .9;
-    transform: scale(1.15) !important;
-}
-
 .browse-buttons:hover {
     background-color:floralwhite;
     -webkit-text-fill-color: black; /* Will override color (regardless of order) */
   -webkit-text-stroke-width: .3px;
-  -webkit-text-stroke-color: black;
+  -webkit-text-stroke-color: black !important;
     opacity: .9;
     transform: scale(1.15) !important;
 }
+
 .browse-buttons-2:hover {
      background-color:floralwhite;
     -webkit-text-fill-color: black; /* Will override color (regardless of order) */
@@ -210,7 +200,7 @@
 }
 
 .carcar {
-    width: 1380px;
+    width: 1340px;
     /* width:  100%; */
     /* height: 125px; */
    
@@ -225,7 +215,7 @@
 
 .header {
   display: flex;
-    font-family: sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 24px;
     font-weight: bold;
     text-shadow: black;

@@ -24,6 +24,20 @@ class Greeting extends React.Component {
                     </div>
                 </div>
             )
+        } else if (this.props.location.pathname === '/') {
+            return (
+                <div className='mainNav-splash'>
+                    <Link className="" to="/login">
+                        <img className='logo-splash' src="/netflix.png" alt="" /></Link>
+                    <div className="bottomNav">
+                        <div className="signinNav">
+                        </div>
+                        <div className="submit-splash">
+                        <Link className="signIn-splash" to="/login">Sign In</Link>
+                        </div>
+                    </div>
+                </div>
+            )
         }
         else if (this.props.location.pathname === '/login') {
             return (
@@ -59,7 +73,7 @@ class Greeting extends React.Component {
                                 <a className="actualSignIn" href="https://www.netflix.com/browse/my-list">My List</a>
                             </li>
                         </ul>
-                        {/* </div> */}
+                        
                     </div>
                     <div className="navRight">
                         <div className="dropdown" >

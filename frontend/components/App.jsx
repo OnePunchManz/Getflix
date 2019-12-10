@@ -13,6 +13,7 @@ import LogInFormContainer from './session_form/login_form_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import VideoContainer from './videos/video_container'
 import ShowContainer from './videos/show_container'
+import SplashContainer from './splash/splash_container'
 
 
 const App = () => (
@@ -20,7 +21,7 @@ const App = () => (
         <header>
         {/* <GreetingContainer /> */}
         </header>
-        <Route exact path="/" component={LogInFormContainer} />
+        <Route exact path="/" component={SplashContainer} />
         <Route path="/login" component={LogInFormContainer} />
         <Route path="/signup" component={SignUpFormContainer} />
         <ProtectedRoute path="/browse" component={BrowseContainer} />

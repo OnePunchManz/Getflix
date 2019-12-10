@@ -3,7 +3,7 @@
     justify-content: center;
     flex-direction: column;
     text-align: center;
-    font-family: sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     
 }
 
@@ -23,14 +23,14 @@
     align-items: flex-start;
     width: 456px;
     margin: auto;
-    font-family: sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .stepTitle {
     right: auto;
     left: auto;
     padding: 10px;
-    font-family: sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 
@@ -39,7 +39,7 @@
     /* position: absolute; */
     font-weight: bold;
     font-size: 23px;
-    font-family: sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     margin-top: 15px;
     padding: 5px;
     height: 15px;
@@ -52,7 +52,7 @@
     font-size: 15px;
      padding: 10px;
     font-weight: bold;
-    font-family: sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     height: 15px;   
     margin-top: 15px;
 }
@@ -66,7 +66,7 @@
     border-radius: 5px;
     padding: 8px;
     color: green;
-    font-family: sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .signup-session-submit {
@@ -79,32 +79,32 @@
     font-weight: normal;
     font-size: 17px;
     text-align: center;
-    font-family: sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 
 }
 
 .signup-input-user {
    padding: 10px;
-   font-family: sans-serif;
+   font-family: Arial, Helvetica, sans-serif;
 }
 
 
 .signup-input-password {
    padding: 10px;
-   font-family: sans-serif;
+   font-family: Arial, Helvetica, sans-serif;
 }
 
 .submitDiv {
     padding: 15px;
-    font-family: sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .signInMessage {
-    font-family: sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .signupErrors {
-      font-family: sans-serif;
+      font-family: Arial, Helvetica, sans-serif;
       color: red
 
 }
