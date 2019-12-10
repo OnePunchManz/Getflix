@@ -12,17 +12,19 @@ class ShowShow extends React.Component {
             <div className="background-splash">
                 < GreetingContainer />
                     <div className="text">
-                    <h2>
+                        
                         <div>
-                        Unlimted movies, TV 
+                            <h2 id="greeting"> Unlimted movies, TV </h2> 
                         </div>
                         <div>
-                        shows, and more.
+                            <h2 id="greeting">shows, and more.</h2>
                         </div>
-                    </h2>
+                   
                     <div>
-                    <h3>Watch anywhere. Cancel anytime</h3>
+                        <h3 id="greeting">Watch anywhere. Cancel anytime</h3>
                     </div>
+                  
+                <Link className="signUp-splash" to="/signup">TRY 30 DAYS FREE</Link>
                 </div>
             </div>
             </div>
