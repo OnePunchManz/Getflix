@@ -25,6 +25,7 @@ class SignUp extends React.Component {
         e.preventDefault();
         const user = Object.assign({}, this.state);
         this.props.processForm(user);
+        setTimeout(() => this.props.processLoginForm(user).then(() => this.props.history.push("/browse")), 2000);
     }
 
     renderErrors() {
