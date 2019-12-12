@@ -258,6 +258,15 @@ var App = function App() {
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_6__["ProtectedRoute"], {
     path: "/videos/1",
     component: _videos_show_container__WEBPACK_IMPORTED_MODULE_8__["default"]
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_6__["ProtectedRoute"], {
+    path: "/videos/2",
+    component: _videos_show_container__WEBPACK_IMPORTED_MODULE_8__["default"]
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_6__["ProtectedRoute"], {
+    path: "/videos/3",
+    component: _videos_show_container__WEBPACK_IMPORTED_MODULE_8__["default"]
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_6__["ProtectedRoute"], {
+    path: "/videos/4",
+    component: _videos_show_container__WEBPACK_IMPORTED_MODULE_8__["default"]
   }));
 };
 
@@ -292,9 +301,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
@@ -310,13 +319,28 @@ var BrowsePage =
 function (_React$Component) {
   _inherits(BrowsePage, _React$Component);
 
-  function BrowsePage() {
+  function BrowsePage(props) {
+    var _this;
+
     _classCallCheck(this, BrowsePage);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(BrowsePage).apply(this, arguments));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(BrowsePage).call(this, props));
+    _this.next = _this.next.bind(_assertThisInitialized(_this));
+    _this.previous = _this.previous.bind(_assertThisInitialized(_this));
+    return _this;
   }
 
   _createClass(BrowsePage, [{
+    key: "next",
+    value: function next() {
+      this.slider.slickNext();
+    }
+  }, {
+    key: "previous",
+    value: function previous() {
+      this.slider.slickPrev();
+    }
+  }, {
     key: "componentDidMount",
     value: function componentDidMount() {
       this.props.fetchVideos();
@@ -325,6 +349,8 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
+      var _this2 = this;
+
       var settings = {
         infinite: true,
         speed: 500,
@@ -408,44 +434,78 @@ function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "container"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_slick__WEBPACK_IMPORTED_MODULE_2___default.a, _extends({
+        ref: function ref(c) {
+          return _this2.slider = c;
+        }
+      }, settings, {
         className: "carcar"
-      }, settings), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      }, settings), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "black"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+        to: "/videos/2"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "item",
         src: "./pika.jpg",
         alt: ""
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "black"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "item",
         src: "./hxh1.jpg",
         alt: ""
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "black"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "item",
         src: "./onepunch.jpg",
         alt: ""
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "black"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "item",
         src: "./boku.png",
         alt: ""
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "black"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "item",
         src: "./bebop.jpg",
         alt: ""
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "black"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "item",
         src: "./gintama.jpg",
         alt: ""
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "black"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "item",
         src: "./onepunch.jpg",
         alt: ""
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "black"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "item",
         src: "./aot.jpg",
         alt: ""
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "black"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "item",
         src: "./saiki.jpeg",
         alt: ""
-      }))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        style: {
+          textAlign: "center"
+        }
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        className: "btn draw-border",
+        onClick: this.previous
+      }, "Previous"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        className: "btn draw-border",
+        onClick: this.next
+      }, "Next")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "header"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
         htmlFor: ""
@@ -458,44 +518,76 @@ function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "container"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_slick__WEBPACK_IMPORTED_MODULE_2___default.a, _extends({
+        ref: function ref(c) {
+          return _this2.slider = c;
+        }
+      }, settings, {
         className: "carcar"
-      }, settings), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      }, settings), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "black"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "item",
         src: "./saiki.jpeg",
         alt: ""
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "black"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "item",
         src: "./hxh.jpg",
         alt: ""
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "black"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "item",
         src: "./demon.jpg",
         alt: ""
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "black"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "item",
         src: "./mob.jpg",
         alt: ""
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "black"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "item",
         src: "./aot.jpg",
         alt: ""
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "black"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "item",
         src: "./one.jpg",
         alt: ""
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "black"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "item",
         src: "./onepunch.jpg",
         alt: ""
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "black"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "item",
         src: "./hxh1.jpg",
         alt: ""
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "black"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "item",
         src: "./onepunch.jpg",
         alt: ""
-      }))))))));
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        style: {
+          textAlign: "center"
+        }
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        className: "button",
+        onClick: this.previous
+      }, "Previous"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        className: "button",
+        onClick: this.next
+      }, "Next")))))));
     }
   }]);
 
@@ -696,8 +788,8 @@ function (_React$Component) {
         })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "dropdown-content"
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-          href: "#"
-        }, "Manage Profiles"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+          href: "https://www.linkedin.com/in/zaid-pasha-6310ba72/"
+        }, "Hire Me"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
           href: "/#/login",
           onClick: this.props.logout
         }, "Sign out of Netflix"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -1371,13 +1463,23 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "show"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("video", {
-        className: "show",
-        autoPlay: true,
-        src: "https://onebucketman-seed.s3-us-west-1.amazonaws.com/Saitama+vs+Boros+Full+Fight+(60fps)+(1080p_60fps_H264-128kbit_AAC).mp4"
-      })));
+      if (this.props.location.pathname === '/videos/1') {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "show"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("video", {
+          className: "show",
+          autoPlay: true,
+          src: "https://onebucketman-seed.s3-us-west-1.amazonaws.com/Saitama+vs+Boros+Full+Fight+(60fps)+(1080p_60fps_H264-128kbit_AAC).mp4"
+        })));
+      } else if (this.props.location.pathname === '/videos/2') {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "show2"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("video", {
+          className: "show2",
+          autoPlay: true,
+          src: "https://onebucketman-seed.s3-us-west-1.amazonaws.com/Poke%CC%81mon+Season+1_+Indigo+League+-+Opening+Theme+(480p_13fps_H264-128kbit_AAC).mp4"
+        })));
+      }
     }
   }]);
 
@@ -35136,7 +35238,7 @@ function warning(message) {
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, __RouterContext, generatePath, matchPath, useHistory, useLocation, useParams, useRouteMatch, withRouter */
+/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, __RouterContext, generatePath, matchPath, useHistory, useLocation, useParams, useRouteMatch, withRouter, BrowserRouter, HashRouter, Link, NavLink */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

@@ -5,3 +5,11 @@ position: fixed;
   min-width: 100%;
   min-height: 100%;
 }
+
+.show2 {
+position: fixed;
+  left: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}

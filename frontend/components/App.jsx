@@ -25,7 +25,14 @@ const App = () => (
         <Route path="/login" component={LogInFormContainer} />
         <Route path="/signup" component={SignUpFormContainer} />
         <ProtectedRoute path="/browse" component={BrowseContainer} />
-        <ProtectedRoute  path="/videos/1" component={ShowContainer} />
+        <ProtectedRoute  path="/videos/1" component={ShowContainer}
+         />
+        <ProtectedRoute path="/videos/2" component={ShowContainer}
+        />
+        <ProtectedRoute path="/videos/3" component={ShowContainer}
+        />
+        <ProtectedRoute path="/videos/4" component={ShowContainer}
+        />
     </div>
 );
 
