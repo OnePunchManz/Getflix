@@ -64,6 +64,12 @@
     height: 70px;
 }
 
+.splash1 {
+    z-index:  3;
+    width: 70px;
+    height: 60px;
+}
+
 .text {
     display: flex;
     z-index: 3;

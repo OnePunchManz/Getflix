@@ -33,6 +33,10 @@ const App = () => (
         />
         <ProtectedRoute path="/videos/4" component={ShowContainer}
         />
+        <ProtectedRoute path="/videos/5" component={ShowContainer}
+        />
+        <ProtectedRoute path="/videos/6" component={ShowContainer}
+        />
     </div>
 );
 

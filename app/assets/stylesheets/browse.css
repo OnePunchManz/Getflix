@@ -339,3 +339,8 @@
   text-decoration: none;
   color: white;
 }
+
+.volumeMute {
+  
+  z-index: 10000;
+}
