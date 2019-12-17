@@ -348,6 +348,7 @@
 .btn-draw-border-L {
   max-width: 600px;
   float: left;
+   margin-left: 5%;
 
 }
 
@@ -360,7 +361,12 @@
 
 .navbuttons {
   margin-bottom: 80px;
-  margin-left: 5%;
+ 
+  
 }
 
 
+.navbuttons2 {
+ padding-top: 10px;
+ padding-bottom: 50px;
+}

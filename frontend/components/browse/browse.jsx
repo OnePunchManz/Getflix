@@ -194,30 +194,29 @@ class BrowsePage extends React.Component {
                       <img className="item" src="./bebop.jpg" alt="" />
                     </Link>
                   </div>
-                  <div className="black">
-                    <img className="item" src="./gintama.jpg" alt="" />
-                  </div>
+                  <Link to={`/videos/6`}>
+                    <div className="black">
+                      <img className="item" src="./gintama.jpg" alt="" />
+                    </div>
+                  </Link>
                   <div className="black">
                     <Link to={`/videos/1`}>
                       <img className="item" src="./onepunch.jpg" alt="" />
                     </Link>
                   </div>
-              
                 </Slider>
               </div>
             </div>
           </div>
-          
         </div>
-                <div className="navbuttons" style={{ textAlign: "center" }}>
-                  <button className="btn-draw-border-L" onClick={this.previous1}>
-                    Previous
-                  </button>
-                  <button className="btn-draw-border-R" onClick={this.next1}>
-                    Next
-                  </button>
-               
-                </div>
+        <div className="navbuttons" style={{ textAlign: "center" }}>
+          <button className="btn-draw-border-L" onClick={this.previous1}>
+            Previous
+          </button>
+          <button className="btn-draw-border-R" onClick={this.next1}>
+            Next
+          </button>
+        </div>
         <div className="header">
           <label htmlFor="">Because you watch too much anime...</label>
         </div>
@@ -233,43 +232,53 @@ class BrowsePage extends React.Component {
                   {...settings}
                 >
                   <div className="black">
-                    <img className="item" src="./saiki.jpeg" alt="" />
+                    <Link to={`/videos/2`}>
+                      <img className="item" src="./pika.jpg" alt="" />
+                    </Link>
                   </div>
                   <div className="black">
-                    <img className="item" src="./hxh.jpg" alt="" />
+                    <Link to={`/videos/3`}>
+                      <img className="item" src="./hxh1.jpg" alt="" />
+                    </Link>
                   </div>
                   <div className="black">
-                    <img className="item" src="./demon.jpg" alt="" />
+                    <Link to={`/videos/1`}>
+                      <img className="item" src="./onepunch.jpg" alt="" />
+                    </Link>
                   </div>
                   <div className="black">
-                    <img className="item" src="./mob.jpg" alt="" />
+                    <Link to={`/videos/4`}>
+                      <img className="item" src="./boku.png" alt="" />
+                    </Link>
                   </div>
                   <div className="black">
-                    <img className="item" src="./aot.jpg" alt="" />
+                    <Link to={`/videos/5`}>
+                      <img className="item" src="./bebop.jpg" alt="" />
+                    </Link>
                   </div>
+                  <Link to={`/videos/6`}>
+                    <div className="black">
+                      <img className="item" src="./gintama.jpg" alt="" />
+                    </div>
+                  </Link>
                   <div className="black">
-                    <img className="item" src="./one.jpg" alt="" />
-                  </div>
-                  <div className="black">
-                    <img className="item" src="./onepunch.jpg" alt="" />
-                  </div>
-                  <div className="black">
-                    <img className="item" src="./hxh1.jpg" alt="" />
-                  </div>
-                  <div className="black">
-                    <img className="item" src="./onepunch.jpg" alt="" />
+                    <Link to={`/videos/1`}>
+                      <img className="item" src="./onepunch.jpg" alt="" />
+                    </Link>
                   </div>
                 </Slider>
-                <div style={{ textAlign: "center" }}>
-                  <button className="button" onClick={this.previous2}>
-                    Previous
-                  </button>
-                  <button className="button" onClick={this.next2}>
-                    Next
-                  </button>
-                </div>
               </div>
             </div>
+          </div>
+        </div>
+        <div className="navbuttons2">
+          <div style={{ textAlign: "center" }}>
+            <button className="btn-draw-border-L" onClick={this.previous2}>
+              Previous
+            </button>
+            <button className="btn-draw-border-R" onClick={this.next2}>
+              Next
+            </button>
           </div>
         </div>
       </div>

@@ -547,13 +547,15 @@ function (_React$Component) {
         className: "item",
         src: "./bebop.jpg",
         alt: ""
-      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+        to: "/videos/6"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "black"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "item",
         src: "./gintama.jpg",
         alt: ""
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "black"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
         to: "/videos/1"
@@ -592,69 +594,73 @@ function (_React$Component) {
         className: "carcar"
       }, settings), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "black"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+        to: "/videos/2"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "item",
-        src: "./saiki.jpeg",
+        src: "./pika.jpg",
         alt: ""
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "black"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        className: "item",
-        src: "./hxh.jpg",
-        alt: ""
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "black"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        className: "item",
-        src: "./demon.jpg",
-        alt: ""
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "black"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        className: "item",
-        src: "./mob.jpg",
-        alt: ""
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "black"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        className: "item",
-        src: "./aot.jpg",
-        alt: ""
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "black"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        className: "item",
-        src: "./one.jpg",
-        alt: ""
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "black"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        className: "item",
-        src: "./onepunch.jpg",
-        alt: ""
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "black"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+        to: "/videos/3"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "item",
         src: "./hxh1.jpg",
         alt: ""
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "black"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+        to: "/videos/1"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "item",
         src: "./onepunch.jpg",
         alt: ""
       }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "black"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+        to: "/videos/4"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "item",
+        src: "./boku.png",
+        alt: ""
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "black"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+        to: "/videos/5"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "item",
+        src: "./bebop.jpg",
+        alt: ""
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+        to: "/videos/6"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "black"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "item",
+        src: "./gintama.jpg",
+        alt: ""
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "black"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+        to: "/videos/1"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "item",
+        src: "./onepunch.jpg",
+        alt: ""
+      })))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "navbuttons2"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         style: {
           textAlign: "center"
         }
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        className: "button",
+        className: "btn-draw-border-L",
         onClick: this.previous2
       }, "Previous"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        className: "button",
+        className: "btn-draw-border-R",
         onClick: this.next2
-      }, "Next")))))));
+      }, "Next"))));
     }
   }]);
 
