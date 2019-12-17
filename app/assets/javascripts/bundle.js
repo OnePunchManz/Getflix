@@ -418,7 +418,7 @@ function (_React$Component) {
       var _this2 = this;
 
       var settings = {
-        infinite: true,
+        infinite: false,
         speed: 500,
         slidesToScroll: 4,
         slidesToShow: 6,
@@ -561,17 +561,18 @@ function (_React$Component) {
         className: "item",
         src: "./onepunch.jpg",
         alt: ""
-      })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      })))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "navbuttons",
         style: {
           textAlign: "center"
         }
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        className: "btn draw-border",
+        className: "btn-draw-border-L",
         onClick: this.previous1
       }, "Previous"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        className: "btn draw-border",
+        className: "btn-draw-border-R",
         onClick: this.next1
-      }, "Next")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, "Next")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "header"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
         htmlFor: ""

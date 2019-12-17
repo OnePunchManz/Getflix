@@ -193,7 +193,7 @@
     display: flex;
   
     width: auto;
-    height: 250px;
+    height: 140px;
     /* z-index: 2; */
     justify-content: space-evenly;
 }
@@ -217,8 +217,8 @@
 }
 
 .carcar {
-    min-width: 600px;
-    max-width: 1440px;
+    /* min-width: 600px; */
+    max-width: 1680px;
    
     /* width:  100%; */
     /* height: 125px; */
@@ -258,7 +258,7 @@
 
 .container {
   display: flex;
-    width: 1220px;
+    /* width: 1200px; */
   padding: 0 55px;
   flex-direction: row;
  
@@ -344,3 +344,23 @@
   
   z-index: 10000;
 }
+
+.btn-draw-border-L {
+  max-width: 600px;
+  float: left;
+
+}
+
+.btn-draw-border-R{
+  float: right;
+  max-width: 600px;
+  margin-right: 5%;
+
+}
+
+.navbuttons {
+  margin-bottom: 80px;
+  margin-left: 5%;
+}
+
+

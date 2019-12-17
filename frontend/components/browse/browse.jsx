@@ -69,7 +69,7 @@ class BrowsePage extends React.Component {
 
   render() {
     var settings = {
-      infinite: true,
+      infinite: false,
       speed: 500,
       slidesToScroll: 4,
       slidesToShow: 6,
@@ -204,18 +204,20 @@ class BrowsePage extends React.Component {
                   </div>
               
                 </Slider>
-                <div style={{ textAlign: "center" }}>
-                  <button className="btn draw-border" onClick={this.previous1}>
-                    Previous
-                  </button>
-                  <button className="btn draw-border" onClick={this.next1}>
-                    Next
-                  </button>
-                </div>
               </div>
             </div>
           </div>
+          
         </div>
+                <div className="navbuttons" style={{ textAlign: "center" }}>
+                  <button className="btn-draw-border-L" onClick={this.previous1}>
+                    Previous
+                  </button>
+                  <button className="btn-draw-border-R" onClick={this.next1}>
+                    Next
+                  </button>
+               
+                </div>
         <div className="header">
           <label htmlFor="">Because you watch too much anime...</label>
         </div>
