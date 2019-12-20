@@ -53,7 +53,7 @@ class Greeting extends React.Component {
               </div>
             </div>
           );
-        } else if (this.props.location.pathname === "/browse") {
+        } else if (this.props.location.pathname === "/browse" ||this.props.location.pathname === "/showsforweebs") {
           return (
             <div className="actualMainNav" id="fixedmenu">
               <div className="actualNav">
@@ -68,37 +68,11 @@ class Greeting extends React.Component {
                     </Link>
                   </li>
                   <li className="navItem">
-                    <a
-                      className="actualSignIn"
-                      href="https://www.netflix.com/browse/genre/83"
-                    >
-                      TV Shows
-                    </a>
+                    <Link className="actualSignIn" to={`/showsforweebs`}>
+                      Shows for Weebs
+                    </Link>
                   </li>
-                  <li className="navItem">
-                    <a
-                      className="actualSignIn"
-                      href="https://www.netflix.com/browse/genre/34399"
-                    >
-                      Movies
-                    </a>
-                  </li>
-                  <li className="navItem">
-                    <a
-                      className="actualSignIn"
-                      href="https://www.netflix.com/browse/genre/1592210"
-                    >
-                      Recently Added
-                    </a>
-                  </li>
-                  <li className="navItem">
-                    <a
-                      className="actualSignIn"
-                      href="https://www.netflix.com/browse/my-list"
-                    >
-                      My List
-                    </a>
-                  </li>
+                 
                 </ul>
               </div>
               <div className="navRight">
@@ -128,7 +102,7 @@ class Greeting extends React.Component {
             <div className="actualMainNav" id="fixedmenu">
               <div className="actualNav">
                 <Link className="" to="/browse">
-                  <img className="logo-arrow" src="/mainerarrow.png" alt="" />
+                  <img className="logo-arrow" src="/whitearrow.png" alt="" />
                 </Link>
                 {/* <div className="actualSigninNav"> */}
               </div>

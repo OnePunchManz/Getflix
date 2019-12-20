@@ -1,0 +1,30 @@
+
+
+.btn-draw-border-L {
+  max-width: 600px;
+  float: left;
+   margin-left: 5%;
+   border-radius: 5px;
+   width: 80px;
+
+}
+
+.btn-draw-border-R{
+  float: right;
+  max-width: 600px;
+  margin-right: 5%;
+  border-radius: 5px;
+   width: 80px;
+
+
+}
+
+.btn-draw-border-R:hover {
+    outline-color: red;
+    -webkit-text-fill-color: black; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: .3px;
+  -webkit-text-stroke-color: black !important;
+    opacity: .9;
+    transform: scale(1.15) !important;
+    
+}

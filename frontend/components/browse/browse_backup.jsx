@@ -1,10 +1,8 @@
-import React from 'react';
-import GreetingContainer from '../greeting/greeting_container'
+import React from "react";
+import GreetingContainer from "../greeting/greeting_container";
 import Slider from "react-slick";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import ReactPlayer from "react-player";
-
-
 
 class BrowsePage extends React.Component {
   constructor(props) {
@@ -72,14 +70,14 @@ class BrowsePage extends React.Component {
       infinite: false,
       speed: 500,
       slidesToScroll: 4,
-      slidesToShow: 5,
+      slidesToShow: 6,
       responsive: [
         {
           breakpoint: 800,
           settings: {
             slidesToShow: 3,
             slidesToScroll: 3,
-            infinite: false,
+            infinite: true,
             dots: true
           }
         },

@@ -1,3 +1,9 @@
+.signup-input {
+     z-index: 2;
+    color: black, !important;
+
+}
+
 .signup-form-box {
     display: flex;
     justify-content: center;
@@ -86,12 +92,16 @@
 .signup-input-user {
    padding: 10px;
    font-family: Arial, Helvetica, sans-serif;
+   z-index: 1;
+     color: black;
 }
 
 
 .signup-input-password {
    padding: 10px;
    font-family: Arial, Helvetica, sans-serif;
+    z-index: 1;
+    color: black;
 }
 
 .submitDiv {
@@ -108,3 +118,4 @@
       color: red
 
 }
+

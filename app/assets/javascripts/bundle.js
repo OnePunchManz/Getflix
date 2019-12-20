@@ -230,6 +230,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _videos_video_container__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./videos/video_container */ "./frontend/components/videos/video_container.js");
 /* harmony import */ var _videos_show_container__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./videos/show_container */ "./frontend/components/videos/show_container.js");
 /* harmony import */ var _splash_splash_container__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./splash/splash_container */ "./frontend/components/splash/splash_container.js");
+/* harmony import */ var _weeb_weeb_container__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./weeb/weeb_container */ "./frontend/components/weeb/weeb_container.js");
+
 
 
 
@@ -255,6 +257,9 @@ var App = function App() {
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_6__["ProtectedRoute"], {
     path: "/browse",
     component: _browse_browse_container__WEBPACK_IMPORTED_MODULE_3__["default"]
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_6__["ProtectedRoute"], {
+    path: "/showsforweebs",
+    component: _weeb_weeb_container__WEBPACK_IMPORTED_MODULE_10__["default"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_6__["ProtectedRoute"], {
     path: "/videos/1",
     component: _videos_show_container__WEBPACK_IMPORTED_MODULE_8__["default"]
@@ -421,13 +426,13 @@ function (_React$Component) {
         infinite: false,
         speed: 500,
         slidesToScroll: 4,
-        slidesToShow: 6,
+        slidesToShow: 5,
         responsive: [{
           breakpoint: 800,
           settings: {
             slidesToShow: 3,
             slidesToScroll: 3,
-            infinite: true,
+            infinite: false,
             dots: true
           }
         }, {
@@ -475,21 +480,13 @@ function (_React$Component) {
         src: "/onepunchlogo.png",
         alt: ""
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        className: "browse-buttons"
+        className: "browse-buttons-2"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "browse-buttons-container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
         id: "onep",
         to: "/videos/1"
-      }, "Play"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        className: "browse-buttons-2"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "browse-buttons-container"
-      }, "+ My List")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        className: "browse-buttons-3"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "browse-buttons-container"
-      }, "More Info")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, "Play"))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "header"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
         htmlFor: ""
@@ -809,7 +806,7 @@ function (_React$Component) {
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "signinNav"
         })));
-      } else if (this.props.location.pathname === "/browse") {
+      } else if (this.props.location.pathname === "/browse" || this.props.location.pathname === "/showsforweebs") {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "actualMainNav",
           id: "fixedmenu"
@@ -831,25 +828,10 @@ function (_React$Component) {
           to: "/browse"
         }, "Home")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
           className: "navItem"
-        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
           className: "actualSignIn",
-          href: "https://www.netflix.com/browse/genre/83"
-        }, "TV Shows")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-          className: "navItem"
-        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-          className: "actualSignIn",
-          href: "https://www.netflix.com/browse/genre/34399"
-        }, "Movies")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-          className: "navItem"
-        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-          className: "actualSignIn",
-          href: "https://www.netflix.com/browse/genre/1592210"
-        }, "Recently Added")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-          className: "navItem"
-        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-          className: "actualSignIn",
-          href: "https://www.netflix.com/browse/my-list"
-        }, "My List")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          to: "/showsforweebs"
+        }, "Shows for Weebs")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "navRight"
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "dropdown"
@@ -880,7 +862,7 @@ function (_React$Component) {
           to: "/browse"
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
           className: "logo-arrow",
-          src: "/mainerarrow.png",
+          src: "/whitearrow.png",
           alt: ""
         }))));
       }
@@ -1050,16 +1032,66 @@ function (_React$Component) {
     value: function login(e) {
       var _this4 = this;
 
-      e.preventDefault();
-      var user = {
-        username: 'zaidclone',
-        password: 'password'
+      e.preventDefault(); // Using setTimeout with setState to add each letter for demoing
+
+      var demoUsrnm = "zaidclone"; // probably need a forLoop with a setState on each one.
+
+      var demoPswrd = "password";
+      var blnkDmUsrnm = "";
+      var blnkDmPswrd = "";
+
+      var delayPrms = function delayPrms(ms, val // Trying a delay with a promise for future mod: promise chaining.
+      ) {
+        return new Promise(function (resolve) {
+          setTimeout(resolve.bind(null, val), ms);
+        });
       };
-      this.setState(user);
-      setInterval(function () {});
-      this.props.processForm(user).then(function () {
-        _this4.props.history.push('/browse');
-      });
+      /* TODO: Refactor these for loops into a helper function. Tricky part is
+      the `this.setState({}). eval it?
+      */
+
+
+      var _loop = function _loop(i) {
+        delayPrms(120 * i).then(function () {
+          var _char2 = demoUsrnm[i];
+          blnkDmUsrnm += _char2;
+
+          _this4.setState({
+            username: blnkDmUsrnm
+          });
+        });
+      };
+
+      for (var i = 0; i < demoUsrnm.length; i++) {
+        _loop(i);
+      } // Hack to delay based on demo username length.
+      // Ideally we use a helper for loop that returns a promise, then
+      // we can invoke the loop per string, then chain on promises...
+
+
+      setTimeout(function () {
+        var _loop2 = function _loop2(_i) {
+          delayPrms(120 * _i).then(function () {
+            var _char = demoPswrd[_i];
+            blnkDmPswrd += _char;
+
+            _this4.setState({
+              password: blnkDmPswrd
+            });
+          });
+        };
+
+        for (var _i = 0; _i < demoPswrd.length; _i++) {
+          _loop2(_i);
+        }
+      }, (demoUsrnm.length + 3) * 120); // delay it even more
+      // Another hack timer length
+
+      setTimeout(function () {
+        _this4.props.processForm(_this4.state).then(function () {
+          _this4.props.history.push("/browse");
+        });
+      }, (demoUsrnm.length + demoPswrd.length + 3) * 120);
     }
   }, {
     key: "renderErrors",
@@ -1710,6 +1742,427 @@ function (_React$Component) {
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
 /* harmony default export */ __webpack_exports__["default"] = (VideoShow);
+
+/***/ }),
+
+/***/ "./frontend/components/weeb/weeb.jsx":
+/*!*******************************************!*\
+  !*** ./frontend/components/weeb/weeb.jsx ***!
+  \*******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _greeting_greeting_container__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../greeting/greeting_container */ "./frontend/components/greeting/greeting_container.js");
+/* harmony import */ var react_slick__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-slick */ "./node_modules/react-slick/lib/index.js");
+/* harmony import */ var react_slick__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_slick__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var react_player__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-player */ "./node_modules/react-player/lib/ReactPlayer.js");
+/* harmony import */ var react_player__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_player__WEBPACK_IMPORTED_MODULE_4__);
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
+
+
+
+
+var WeebPage =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(WeebPage, _React$Component);
+
+  function WeebPage(props) {
+    var _this;
+
+    _classCallCheck(this, WeebPage);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(WeebPage).call(this, props));
+    _this.next1 = _this.next1.bind(_assertThisInitialized(_this));
+    _this.previous1 = _this.previous1.bind(_assertThisInitialized(_this));
+    _this.next2 = _this.next2.bind(_assertThisInitialized(_this));
+    _this.previous2 = _this.previous2.bind(_assertThisInitialized(_this));
+    _this.state = {
+      hover: true,
+      muted: true,
+      delay: false
+    }; // this.handleMute = this.handleMute.bind(this);
+    // this.muter = this.muter.bind(this);
+
+    return _this;
+  }
+
+  _createClass(WeebPage, [{
+    key: "next1",
+    value: function next1() {
+      this.slider1.slickNext();
+    }
+  }, {
+    key: "previous1",
+    value: function previous1() {
+      this.slider1.slickPrev();
+    }
+  }, {
+    key: "next2",
+    value: function next2() {
+      this.slider2.slickNext();
+    }
+  }, {
+    key: "previous2",
+    value: function previous2() {
+      this.slider2.slickPrev();
+    }
+  }, {
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      this.props.fetchVideos();
+      this.props.fetchVideo();
+    }
+  }, {
+    key: "handleMute",
+    value: function handleMute(e) {
+      if (this.state.muted === true) {
+        this.setState({
+          muted: false
+        });
+      } else {
+        this.setState({
+          muted: true
+        });
+      }
+    }
+  }, {
+    key: "muter",
+    value: function muter() {
+      if (this.state.muted === true) {
+        muteButton = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "muteButton",
+          onClick: this.handleMute
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+          className: "volumeMute",
+          src: "./volume-off-indicator.png",
+          alt: ""
+        }));
+      } else {
+        muteButton = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "muteButton",
+          onClick: this.handleMute
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+          className: "volumeMute",
+          src: "./volume-off-indicator.png",
+          alt: ""
+        }));
+      }
+
+      return muteButton;
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this2 = this;
+
+      var settings = {
+        infinite: false,
+        speed: 500,
+        slidesToScroll: 4,
+        slidesToShow: 6,
+        responsive: [{
+          breakpoint: 800,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            infinite: true,
+            dots: true
+          }
+        }, {
+          breakpoint: 500,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            initialSlide: 2
+          }
+        }, {
+          breakpoint: 240,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }]
+      };
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "daddyDiv"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "mainerDiv"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("link", {
+        rel: "stylesheet",
+        type: "text/css",
+        charSet: "UTF-8",
+        href: "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("link", {
+        rel: "stylesheet",
+        type: "text/css",
+        href: "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_greeting_greeting_container__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "mainBrowseDiv"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "mainvideo"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("video", {
+        id: "myVideo",
+        src: "./onepunch.mp4",
+        autoPlay: true,
+        controls: true,
+        muted: true
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "buttonPrime"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "browse-logo",
+        src: "/onepunchlogo.png",
+        alt: ""
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        className: "browse-buttons-2"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "browse-buttons-container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+        id: "onep",
+        to: "/videos/1"
+      }, "Play"))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "header"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        htmlFor: ""
+      }, "Shows for Weebs")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "movieRow"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "mainSlider"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "thumbnailHolder"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "container"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_slick__WEBPACK_IMPORTED_MODULE_2___default.a, _extends({
+        ref: function ref(c) {
+          return _this2.slider1 = c;
+        }
+      }, settings, {
+        className: "carcar"
+      }, settings), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "black"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+        to: "/videos/2"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "item",
+        src: "./pika.jpg",
+        alt: ""
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "black"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+        to: "/videos/3"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "item",
+        src: "./hxh1.jpg",
+        alt: ""
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "black"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+        to: "/videos/1"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "item",
+        src: "./onepunch.jpg",
+        alt: ""
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "black"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+        to: "/videos/4"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "item",
+        src: "./boku.png",
+        alt: ""
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "black"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+        to: "/videos/5"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "item",
+        src: "./bebop.jpg",
+        alt: ""
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+        to: "/videos/6"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "black"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "item",
+        src: "./gintama.jpg",
+        alt: ""
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "black"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+        to: "/videos/1"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "item",
+        src: "./onepunch.jpg",
+        alt: ""
+      })))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "navbuttons",
+        style: {
+          textAlign: "center"
+        }
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        className: "btn-draw-border-L",
+        onClick: this.previous1
+      }, "Previous"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        className: "btn-draw-border-R",
+        onClick: this.next1
+      }, "Next")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "header"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+        htmlFor: ""
+      }, "Because you watch too much anime...")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "movieRow2"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "mainSlider"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "thumbnailHolder"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "container"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_slick__WEBPACK_IMPORTED_MODULE_2___default.a, _extends({
+        ref: function ref(c) {
+          return _this2.slider2 = c;
+        }
+      }, settings, {
+        className: "carcar"
+      }, settings), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "black"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+        to: "/videos/2"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "item",
+        src: "./pika.jpg",
+        alt: ""
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "black"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+        to: "/videos/3"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "item",
+        src: "./hxh1.jpg",
+        alt: ""
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "black"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+        to: "/videos/1"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "item",
+        src: "./onepunch.jpg",
+        alt: ""
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "black"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+        to: "/videos/4"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "item",
+        src: "./boku.png",
+        alt: ""
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "black"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+        to: "/videos/5"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "item",
+        src: "./bebop.jpg",
+        alt: ""
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+        to: "/videos/6"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "black"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "item",
+        src: "./gintama.jpg",
+        alt: ""
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "black"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+        to: "/videos/1"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "item",
+        src: "./onepunch.jpg",
+        alt: ""
+      })))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "navbuttons2"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        style: {
+          textAlign: "center"
+        }
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        className: "btn-draw-border-L",
+        onClick: this.previous2
+      }, "Previous"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        className: "btn-draw-border-R",
+        onClick: this.next2
+      }, "Next"))));
+    }
+  }]);
+
+  return WeebPage;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+/* harmony default export */ __webpack_exports__["default"] = (WeebPage);
+
+/***/ }),
+
+/***/ "./frontend/components/weeb/weeb_container.js":
+/*!****************************************************!*\
+  !*** ./frontend/components/weeb/weeb_container.js ***!
+  \****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _weeb__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./weeb */ "./frontend/components/weeb/weeb.jsx");
+/* harmony import */ var _actions_video_actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../actions/video_actions */ "./frontend/actions/video_actions.js");
+
+
+
+
+var mSTP = function mSTP(state) {
+  return {
+    user: state.user,
+    videos: Object.values(state.videos)
+  };
+};
+
+var mDTP = function mDTP(dispatch) {
+  return {
+    fetchVideo: function fetchVideo(id) {
+      return dispatch(Object(_actions_video_actions__WEBPACK_IMPORTED_MODULE_2__["fetchVideo"])(id));
+    },
+    fetchVideos: function fetchVideos() {
+      return dispatch(Object(_actions_video_actions__WEBPACK_IMPORTED_MODULE_2__["fetchVideos"])());
+    }
+  };
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_0__["connect"])(mSTP, mDTP)(_weeb__WEBPACK_IMPORTED_MODULE_1__["default"]));
 
 /***/ }),
 
