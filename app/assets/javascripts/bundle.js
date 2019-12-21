@@ -278,6 +278,9 @@ var App = function App() {
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_6__["ProtectedRoute"], {
     path: "/videos/6",
     component: _videos_show_container__WEBPACK_IMPORTED_MODULE_8__["default"]
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_6__["ProtectedRoute"], {
+    path: "/videos/7",
+    component: _videos_show_container__WEBPACK_IMPORTED_MODULE_8__["default"]
   }));
 };
 
@@ -1636,6 +1639,15 @@ function (_React$Component) {
           controls: true,
           src: "https://onebucketman-seed.s3-us-west-1.amazonaws.com/Gintama+Opening+1+_+Pray+(HD)+(1080p_24fps_H264-128kbit_AAC).mp4"
         })));
+      } else if (this.props.location.pathname === "/videos/7") {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_greeting_greeting_container__WEBPACK_IMPORTED_MODULE_2__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "show"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("video", {
+          className: "show",
+          autoPlay: true,
+          controls: true,
+          src: "https://onebucketman-seed.s3-us-west-1.amazonaws.com/EREN+VS+REINER+FULL+FIGHT+_+ATTACK+ON+TITAN+SEASON+3+(720p_30fps_H264-192kbit_AAC).mp4"
+        })));
       }
     }
   }]);
@@ -1929,7 +1941,7 @@ function (_React$Component) {
         className: "mainvideo"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("video", {
         id: "myVideo",
-        src: "./onepunch.mp4",
+        src: "https://onebucketman-seed.s3-us-west-1.amazonaws.com/Levi+Ackerman+vs+Beast+Titan+_+Attack+on+Titan+Season+3+(1080p_30fps_H264-128kbit_AAC).mp4",
         autoPlay: true,
         controls: true,
         muted: true
@@ -1937,7 +1949,7 @@ function (_React$Component) {
         className: "buttonPrime"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "browse-logo",
-        src: "/onepunchlogo.png",
+        src: "/aotlogo.png",
         alt: ""
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         className: "browse-buttons-2"
@@ -1945,7 +1957,7 @@ function (_React$Component) {
         className: "browse-buttons-container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
         id: "onep",
-        to: "/videos/1"
+        to: "/videos/7"
       }, "Play"))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "header"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {

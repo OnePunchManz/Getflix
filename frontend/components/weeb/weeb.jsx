@@ -116,28 +116,20 @@ class WeebPage extends React.Component {
           <GreetingContainer />
           <div className="mainBrowseDiv">
             <div className="mainvideo">
-              {/* <ReactPlayer
-                className="myVideo"
-                width="100%"
-                height="100%"
-                loop={true}
-                url={`./onepunch.mp4`}
-                muted={this.state.muted}
-                playing={true}
-              /> */}
+             
               <video
                 id="myVideo"
-                src="./onepunch.mp4"
+                src="https://onebucketman-seed.s3-us-west-1.amazonaws.com/Levi+Ackerman+vs+Beast+Titan+_+Attack+on+Titan+Season+3+(1080p_30fps_H264-128kbit_AAC).mp4"
                 autoPlay
                 controls
                 muted
               ></video>
 
               <div className="buttonPrime">
-                <img className="browse-logo" src="/onepunchlogo.png" alt="" />
+                <img className="browse-logo" src="/aotlogo.png" alt="" />
                 <button className="browse-buttons-2">
                   <div className="browse-buttons-container">
-                    <Link id="onep" to={`/videos/1`}>
+                    <Link id="onep" to={`/videos/7`}>
                       Play
                     </Link>
                   </div>

@@ -95,6 +95,20 @@ class ShowShow extends React.Component {
               </div>
             </div>
           );
+        } else if (this.props.location.pathname === "/videos/7") {
+          return (
+            <div>
+              <GreetingContainer />
+              <div className="show">
+                <video
+                  className="show"
+                  autoPlay
+                  controls
+                  src="https://onebucketman-seed.s3-us-west-1.amazonaws.com/EREN+VS+REINER+FULL+FIGHT+_+ATTACK+ON+TITAN+SEASON+3+(720p_30fps_H264-192kbit_AAC).mp4"
+                ></video>
+              </div>
+            </div>
+          );
         }
 }
 

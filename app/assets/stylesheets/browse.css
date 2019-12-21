@@ -90,6 +90,7 @@
     z-index: 1;
     font-family: Arial, Helvetica, sans-serif;
     justify-content: center;
+    margin-left: 24%;
 
 }
 
@@ -235,8 +236,8 @@
 .header {
   display: flex;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 24px;
-    font-weight: bold;
+    font-size: 20px;
+    /* font-weight: bold; */
     text-shadow: black;
     -webkit-text-fill-color: #e5e5e5; /* Will override color (regardless of order) */
   -webkit-text-stroke-width: 1px;

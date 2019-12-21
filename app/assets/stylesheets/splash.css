@@ -80,13 +80,6 @@
     margin-top: 15%;
     font-weight: bold;
 }
-.footer {
-    display: flex;
-    margin-top: 200px;
-    border-top: thin;
-    border-top-color: slategray;
-    background-color: black;
-}
 
 .mainSplashDiv {
     background-color: black

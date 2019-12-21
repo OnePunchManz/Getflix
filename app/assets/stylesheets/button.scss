@@ -28,3 +28,14 @@
     transform: scale(1.15) !important;
     
 }
+
+.btn-draw-border-L:hover {
+    outline-color: red;
+    -webkit-text-fill-color: black; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: .3px;
+  -webkit-text-stroke-color: black !important;
+    opacity: .9;
+    transform: scale(1.15) !important;
+    
+
+}
