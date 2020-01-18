@@ -18,6 +18,7 @@ class BrowsePage extends React.Component {
       muted: true,
       delay: false
     };
+    console.log(this.state)
     // this.handleMute = this.handleMute.bind(this);
     // this.muter = this.muter.bind(this);
   }
@@ -38,7 +39,7 @@ class BrowsePage extends React.Component {
 
   componentDidMount() {
     this.props.fetchVideos();
-    this.props.fetchVideo();
+    this.props.fetchVideo(this.props.videoId);
   }
 
   handleMute(e) {

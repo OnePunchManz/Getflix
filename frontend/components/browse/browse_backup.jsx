@@ -11,11 +11,8 @@ class BrowsePage extends React.Component {
     this.previous1 = this.previous1.bind(this);
     this.next2 = this.next2.bind(this);
     this.previous2 = this.previous2.bind(this);
-    this.state = {
-      hover: true,
-      muted: true,
-      delay: false
-    };
+    this.state.videos = this.props.videos
+    this.state.fetchVideos();
     // this.handleMute = this.handleMute.bind(this);
     // this.muter = this.muter.bind(this);
   }
@@ -35,8 +32,8 @@ class BrowsePage extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchVideos();
-    this.props.fetchVideo();
+    this.state.fetchVideos();
+    this.state.fetchVideo();
   }
 
   handleMute(e) {

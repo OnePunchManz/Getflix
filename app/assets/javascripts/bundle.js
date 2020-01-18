@@ -350,7 +350,8 @@ function (_React$Component) {
       hover: true,
       muted: true,
       delay: false
-    }; // this.handleMute = this.handleMute.bind(this);
+    };
+    console.log(_this.state); // this.handleMute = this.handleMute.bind(this);
     // this.muter = this.muter.bind(this);
 
     return _this;
@@ -380,7 +381,7 @@ function (_React$Component) {
     key: "componentDidMount",
     value: function componentDidMount() {
       this.props.fetchVideos();
-      this.props.fetchVideo();
+      this.props.fetchVideo(this.props.videoId);
     }
   }, {
     key: "handleMute",
