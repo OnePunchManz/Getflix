@@ -82,6 +82,9 @@ class SignUp extends React.Component {
                                 <div className="submitDiv">
                                 <input className="signup-session-submit" type="submit" value={this.props.formType}/>
                                 </div>
+                                <div className="submitDivGuest">
+                                <input className="signup-session-submit-1" type="submit" value="sign in as guest" />
+                            </div>
                         </div>
                     </form>
                 </div>
