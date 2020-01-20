@@ -1,24 +1,14 @@
-# README
+# GetFlix
+[Live Link](https://oneflixman.herokuapp.com/#/)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Is a Netflix-inspired Anime app designed to allow you to watch your favrotie anime on the fly! Sign in and browse our selection of anime to choose form! 
 
-Things you may want to cover:
 
-* Ruby version
+## Table of Contents
+- [Technology Stack](#Technology-Stack)
+- [How to Use](#How-to-Use)
 
-* System dependencies
 
-* Configuration
+## How to Use 
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Once you've signed up or logged in, browse through our video library and begin watching shows! 
