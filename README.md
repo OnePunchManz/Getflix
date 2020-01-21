@@ -36,25 +36,8 @@ After logging in, users have a wide variety of animes to browse and watch. All v
 Nav bar dynamically renders whenever the user moves from one page to the other. 
 
 ```javascript
-
-render() {
-        if (this.props.location.pathname === "/signup") {
-          return (
-            <div className="mainNav-splash">
-              <Link className="" to="/login">
-                <img className="logoPrime" src="/netflix.png" alt="" />
-              </Link>
-              <div className="bottomNav">
-                <div className="signinNav"></div>
-                <div className="submit-splash">
-                  <Link className="signIn-splash" to="/login">
-                    Sign In
-                  </Link>
-                </div>
-              </div>
-            </div>
-          );
-        } else if (this.props.location.pathname === "/") {
+render(){
+ if (this.props.location.pathname === "/") {
           return (
             <div className="mainNav-splash">
               <Link className="" to="/login">
@@ -70,6 +53,18 @@ render() {
               </div>
             </div>
           );
+        } else if (this.props.location.pathname === "/login") {
+          return (
+            <div className="mainLoginNav">
+              <Link className="" to="/signup">
+                <img className="logo" src="/netflix.png" alt="" />
+              </Link>
+              <div className="bottomNav">
+                <div className="signinNav"></div>
+              </div>
+            </div>
+          );
+    }
 
 ```
 
