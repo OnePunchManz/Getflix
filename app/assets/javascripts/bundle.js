@@ -758,19 +758,6 @@ function (_React$Component) {
     key: "render",
     value: function render() {
       if (this.props.location.pathname === "/signup") {
-        // return (
-        //   <div className="mainNav">
-        //     <Link className="" to="/login">
-        //       <img className="logo" src="/netflix.png" alt="" />
-        //     </Link>
-        //     <div className="bottomNav">
-        //       <div className="signinNav"></div>
-        //       <Link className="signIn" to="/login">
-        //         Sign In
-        //       </Link>
-        //     </div>
-        //   </div>
-        // );
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "mainNav-splash"
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
@@ -1488,7 +1475,7 @@ function (_React$Component) {
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         className: "session-submit",
         type: "submit",
-        value: "Sign In"
+        value: "Sign Up"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         className: "session-submit",
         type: "submit",
@@ -1498,8 +1485,8 @@ function (_React$Component) {
         className: "loginErrors"
       }, this.renderErrors()), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
         className: "signupLink",
-        to: "/signup"
-      }, "New to Netflix? Sign up now. "))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        to: "/login"
+      }, "Already have a Netflix account? Click Here "))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "footer"
       }));
     }

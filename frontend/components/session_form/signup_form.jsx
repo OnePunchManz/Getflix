@@ -216,14 +216,14 @@ class SignUp extends React.Component {
                             className="login-input"
                             placeholder="Password"
                         />
-                        <input className="session-submit" type="submit" value="Sign In"
+                        <input className="session-submit" type="submit" value="Sign Up"
                         />
                         <input className="session-submit" type="submit" value="Sign In as Guest" onClick={this.login}
                         />
                         <div className="loginErrors">
                             {this.renderErrors()}
                         </div>
-                        <Link className="signupLink" to="/signup" >New to Netflix? Sign up now. </Link>
+                        <Link className="signupLink" to="/login" >Already have a Netflix account? Click Here </Link>
                         {/* </div> */}
                     </form>
                     {/* </div> */}
