@@ -17,7 +17,7 @@ Is a Netflix-inspired Anime app designed to allow you to watch your favrotie ani
 GetFlix is made using Javascript and Ruby.
 - React components were used on the frontend with Redux to manage state.
 - Ruby on Rails was used on the backend.
-- SQL was used for the database. 
+- PostgreSQL was used for the database. 
 - AWS was used as a CDN. 
 
 
