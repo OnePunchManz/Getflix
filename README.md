@@ -8,7 +8,8 @@ Is a Netflix-inspired Anime app designed to allow you to watch your favrotie ani
 - [Technology Stack](#Technology-Stack)
 - [How to Use](#How-to-Use)
 - [Features](#Features)
-  * [Fresh Workouts](#Fresh-Workouts)
+  * [Custom Nav Bar](#Custom-Nav-Bar)
+  * [Custom Error Handling](#Custom-Error-Handling)
 - [Future Features](#Future-Features)
 
 ## Technology Stack
@@ -30,7 +31,7 @@ Once you've signed up or logged in, browse through our video library and begin w
 
 After logging in, users have a wide variety of animes to browse and watch. All video content was hosted on AWS, to ensure the website lightning fast based on wherever our users may be. 
 
-### Custom Nav Bar based on URL
+### Custom Nav Bar
 
 Nav bar dynamically renders whenever the user moves from one page to the other. 
 
@@ -71,6 +72,24 @@ render() {
           );
 
 ```
+
+### Custom Error Handling
+Users are required to input their username, and password inorder to signup for an account. To ensure valid inputs, (e.g., passwords over 6 characters), validations targeting each each specific input field were put into place.
+
+```javascript
+export const login = (user) => dispatch => (
+     APIUtil.login(user)
+        .then(user => dispatch(receiveCurrentUser(user)), err => (
+            dispatch(receiveErrors(err.responseJSON))
+        ))
+);
+```
+
+```ruby 
+ validates :password, length: { minimum: 6 }, allow_nil: true
+```
+
+Validations were put in on the front and backend. Model level validations, and database constraints to ensure redundancy.
 
 ## Future Features
 
