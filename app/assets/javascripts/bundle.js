@@ -758,23 +758,38 @@ function (_React$Component) {
     key: "render",
     value: function render() {
       if (this.props.location.pathname === "/signup") {
+        // return (
+        //   <div className="mainNav">
+        //     <Link className="" to="/login">
+        //       <img className="logo" src="/netflix.png" alt="" />
+        //     </Link>
+        //     <div className="bottomNav">
+        //       <div className="signinNav"></div>
+        //       <Link className="signIn" to="/login">
+        //         Sign In
+        //       </Link>
+        //     </div>
+        //   </div>
+        // );
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-          className: "mainNav"
+          className: "mainNav-splash"
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
           className: "",
           to: "/login"
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-          className: "logo",
+          className: "logoPrime",
           src: "/netflix.png",
           alt: ""
         })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "bottomNav"
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "signinNav"
-        }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-          className: "signIn",
+        }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "submit-splash"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+          className: "signIn-splash",
           to: "/login"
-        }, "Sign In")));
+        }, "Sign In"))));
       } else if (this.props.location.pathname === "/") {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "mainNav-splash"
@@ -1213,6 +1228,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _greeting_greeting_container__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../greeting/greeting_container */ "./frontend/components/greeting/greeting_container.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -1233,6 +1249,93 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
+// import React from 'react';
+// import GreetingContainer from '../greeting/greeting_container'
+// class SignUp extends React.Component {
+//     constructor(props) {
+//         super(props);
+//         this.state = {
+//             username: '',
+//             password: ''
+//         };
+//         this.handleSubmit = this.handleSubmit.bind(this);
+//     }
+//     update(field) {
+//         return e => this.setState({
+//             [field]: e.currentTarget.value
+//         });
+//     }
+//     componentDidMount() {
+//         this.props.clearErrors()
+//     }
+//     handleSubmit(e) {
+//         e.preventDefault();
+//         const user = Object.assign({}, this.state);
+//         this.props.processForm(user);
+//         setTimeout(() => this.props.processLoginForm(user).then(() => this.props.history.push("/browse")), 2000);
+//     }
+//     renderErrors() {
+//         return (
+//             <ul>
+//                 {this.props.errors.map((error, i) => (
+//                     <li key={`error-${i}`}>
+//                         {error}
+//                     </li>
+//                 ))}
+//             </ul>
+//         );
+//     }
+//     render() {
+//         return (
+//             <div className="">
+//             < GreetingContainer />
+//                 <div className="signup-form-container">
+//                     <form onSubmit={this.handleSubmit} className="signup-form-box">
+//                         <div className="form">
+//                             <div className="stepTitle"> 
+//                                 Sign up to start your free month 
+//                             </div>
+//                             <div className="regFormTitle">
+//                                 Create your account.    
+//                             </div>
+//                             <div className="signupErrors">{this.renderErrors()}</div>
+//                         </div>
+//                         <div className="signup-form">
+//                             <div className="signup-input-user">
+//                                 {/* <label>Email */}
+//                                     <input type="text"
+//                                         value={this.state.username}
+//                                         onChange={this.update('username')}
+//                                         className="signup-input"
+//                                          placeholder="Email"         
+//                                     />
+//                                 {/* </label> */}
+//                             </div>
+//                             <div className="signup-input-password">
+//                                 {/* <label>Password */}
+//                                     <input type="password"
+//                                         value={this.state.password}
+//                                         onChange={this.update('password')}
+//                                         className="signup-input"
+//                                         placeholder="Password"
+//                                     />
+//                                 {/* </label> */}
+//                             </div>
+//                                 <div className="submitDiv">
+//                                 <input className="signup-session-submit" type="submit" value={this.props.formType}/>
+//                                 </div>
+//                                 <div className="submitDivGuest">
+//                                 <input className="signup-session-submit-1" type="submit" value="sign in as guest" />
+//                             </div>
+//                         </div>
+//                     </form>
+//                 </div>
+//             </div>
+//         );
+//     }
+// }
+// export default SignUp;
+
 
 
 
@@ -1252,10 +1355,16 @@ function (_React$Component) {
       password: ''
     };
     _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
+    _this.login = _this.login.bind(_assertThisInitialized(_this));
     return _this;
   }
 
   _createClass(SignUp, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      this.props.clearErrors();
+    }
+  }, {
     key: "update",
     value: function update(field) {
       var _this2 = this;
@@ -1265,23 +1374,81 @@ function (_React$Component) {
       };
     }
   }, {
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      this.props.clearErrors();
-    }
-  }, {
     key: "handleSubmit",
     value: function handleSubmit(e) {
       var _this3 = this;
 
       e.preventDefault();
       var user = Object.assign({}, this.state);
-      this.props.processForm(user);
-      setTimeout(function () {
-        return _this3.props.processLoginForm(user).then(function () {
-          return _this3.props.history.push("/browse");
+      this.props.processForm(user).then(function () {
+        _this3.props.history.push('/browse');
+      });
+    }
+  }, {
+    key: "login",
+    value: function login(e) {
+      var _this4 = this;
+
+      e.preventDefault(); // Using setTimeout with setState to add each letter for demoing
+
+      var demoUsrnm = "zaidclone"; // probably need a forLoop with a setState on each one.
+
+      var demoPswrd = "password";
+      var blnkDmUsrnm = "";
+      var blnkDmPswrd = "";
+
+      var delayPrms = function delayPrms(ms, val // Trying a delay with a promise for future mod: promise chaining.
+      ) {
+        return new Promise(function (resolve) {
+          setTimeout(resolve.bind(null, val), ms);
         });
-      }, 2000);
+      };
+      /* TODO: Refactor these for loops into a helper function. Tricky part is
+      the `this.setState({}). eval it?
+      */
+
+
+      var _loop = function _loop(i) {
+        delayPrms(120 * i).then(function () {
+          var _char2 = demoUsrnm[i];
+          blnkDmUsrnm += _char2;
+
+          _this4.setState({
+            username: blnkDmUsrnm
+          });
+        });
+      };
+
+      for (var i = 0; i < demoUsrnm.length; i++) {
+        _loop(i);
+      } // Hack to delay based on demo username length.
+      // Ideally we use a helper for loop that returns a promise, then
+      // we can invoke the loop per string, then chain on promises...
+
+
+      setTimeout(function () {
+        var _loop2 = function _loop2(_i) {
+          delayPrms(120 * _i).then(function () {
+            var _char = demoPswrd[_i];
+            blnkDmPswrd += _char;
+
+            _this4.setState({
+              password: blnkDmPswrd
+            });
+          });
+        };
+
+        for (var _i = 0; _i < demoPswrd.length; _i++) {
+          _loop2(_i);
+        }
+      }, (demoUsrnm.length + 3) * 120); // delay it even more
+      // Another hack timer length
+
+      setTimeout(function () {
+        _this4.props.processForm(_this4.state).then(function () {
+          _this4.props.history.push("/browse");
+        });
+      }, (demoUsrnm.length + demoPswrd.length + 3) * 120);
     }
   }, {
     key: "renderErrors",
@@ -1296,45 +1463,45 @@ function (_React$Component) {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: ""
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_greeting_greeting_container__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "signup-form-container"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+        className: "mainSplashDiv"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "background"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_greeting_greeting_container__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         onSubmit: this.handleSubmit,
-        className: "signup-form-box"
+        className: "login-form-box"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "form"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "stepTitle"
-      }, "Sign up to start your free month"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "regFormTitle"
-      }, "Create your account."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "signupErrors"
-      }, this.renderErrors())), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "signup-form"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "signup-input-user"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        className: "signInMessage"
+      }, "Sign Up"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+        className: "sessionError"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "text",
         value: this.state.username,
         onChange: this.update('username'),
-        className: "signup-input",
+        className: "login-input",
         placeholder: "Email"
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "signup-input-password"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "password",
         value: this.state.password,
         onChange: this.update('password'),
-        className: "signup-input",
+        className: "login-input",
         placeholder: "Password"
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "submitDiv"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        className: "signup-session-submit",
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        className: "session-submit",
         type: "submit",
-        value: this.props.formType
-      }))))));
+        value: "Sign In"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        className: "session-submit",
+        type: "submit",
+        value: "Sign In as Guest",
+        onClick: this.login
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "loginErrors"
+      }, this.renderErrors()), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+        className: "signupLink",
+        to: "/signup"
+      }, "New to Netflix? Sign up now. "))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "footer"
+      }));
     }
   }]);
 

@@ -13,16 +13,31 @@ class Greeting extends React.Component {
     render() {
 
         if (this.props.location.pathname === "/signup") {
+          // return (
+          //   <div className="mainNav">
+          //     <Link className="" to="/login">
+          //       <img className="logo" src="/netflix.png" alt="" />
+          //     </Link>
+          //     <div className="bottomNav">
+          //       <div className="signinNav"></div>
+          //       <Link className="signIn" to="/login">
+          //         Sign In
+          //       </Link>
+          //     </div>
+          //   </div>
+          // );
           return (
-            <div className="mainNav">
+            <div className="mainNav-splash">
               <Link className="" to="/login">
-                <img className="logo" src="/netflix.png" alt="" />
+                <img className="logoPrime" src="/netflix.png" alt="" />
               </Link>
               <div className="bottomNav">
                 <div className="signinNav"></div>
-                <Link className="signIn" to="/login">
-                  Sign In
-                </Link>
+                <div className="submit-splash">
+                  <Link className="signIn-splash" to="/login">
+                    Sign In
+                  </Link>
+                </div>
               </div>
             </div>
           );
