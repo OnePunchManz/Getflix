@@ -27,7 +27,7 @@ Once you've signed up or logged in, browse through our video library and begin w
 
 ## Features
 
-<img src="https://github.com/OnePunchManz/Getflix/blob/master/public/screenshot.png" width="95%" align="center" > 
+<img src="https://github.com/OnePunchManz/Getflix/blob/master/public/aot.gif" width="95%" align="center" > 
 
 After logging in, users have a wide variety of animes to browse and watch. All video content was hosted on AWS, to ensure the website lightning fast based on wherever our users may be. 
 
