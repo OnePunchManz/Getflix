@@ -6,12 +6,8 @@ class Greeting extends React.Component {
         super(props)
     }
     
-
-
-
    
     render() {
-
         if (this.props.location.pathname === "/signup") {
           return (
             <div className="mainNav-splash">
@@ -89,7 +85,10 @@ class Greeting extends React.Component {
                     <a href="https://www.linkedin.com/in/zaid-pasha-6310ba72/">
                       Hire Me
                     </a>
-
+                    <a href="https://github.com/OnePunchManz">
+                      
+                     GitHub
+                    </a>
                     <a href="/#/login" onClick={this.props.logout}>
                       Sign out of Netflix
                     </a>

@@ -851,6 +851,8 @@ function (_React$Component) {
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
           href: "https://www.linkedin.com/in/zaid-pasha-6310ba72/"
         }, "Hire Me"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+          href: "https://github.com/OnePunchManz"
+        }, "GitHub"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
           href: "/#/login",
           onClick: this.props.logout
         }, "Sign out of Netflix"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {

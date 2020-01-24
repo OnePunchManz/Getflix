@@ -106,6 +106,7 @@ background-color: orange;
 /* Change color of dropdown links on hover */
 .dropdown-content a:hover {   background-color:floralwhite;
     -webkit-text-fill-color: black; /* Will override color (regardless of order) */
+    opacity: .7;
   -webkit-text-stroke-width: .3px;
   -webkit-text-stroke-color: black;}
 
