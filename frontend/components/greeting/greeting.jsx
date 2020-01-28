@@ -82,10 +82,10 @@ class Greeting extends React.Component {
                     />
                   </button>
                   <div className="dropdown-content">
-                    <a href="https://www.linkedin.com/in/zaid-pasha-6310ba72/">
+                    <a href="https://www.linkedin.com/in/zaid-pasha-6310ba72/" target="_blank">
                       Hire Me
                     </a>
-                    <a href="https://github.com/OnePunchManz">
+                    <a href="https://github.com/OnePunchManz" target="_blank">
                       
                      GitHub
                     </a>
