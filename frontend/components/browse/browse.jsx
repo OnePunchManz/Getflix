@@ -199,7 +199,7 @@ class BrowsePage extends React.Component {
                   </Link>
                   <div className="black">
                     <Link to={`/videos/1`}>
-                      <img className="item" src="./onepunch.jpg" alt="" />
+                      <img className="item" src="./demon.jpg" alt="" />
                     </Link>
                   </div>
                 </Slider>
@@ -236,7 +236,7 @@ class BrowsePage extends React.Component {
                   </div>
                   <div className="black">
                     <Link to={`/videos/3`}>
-                      <img className="item" src="./hxh1.jpg" alt="" />
+                      <img className="item" src="./mob.jpg" alt="" />
                     </Link>
                   </div>
                   <div className="black">
