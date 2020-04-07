@@ -8,8 +8,8 @@ const mSTP = state => ({
 })
 
 const mDTP = dispatch => ({
-    fetchVideo: (id) => dispatch(fetchVideo(id)),
-    fetchVideos: () => dispatch(fetchVideos())
+    // fetchVideo: (id) => dispatch(fetchVideo(id)),
+    // fetchVideos: () => dispatch(fetchVideos())
 })
 
 export default connect(mSTP,mDTP)(BrowsePage)

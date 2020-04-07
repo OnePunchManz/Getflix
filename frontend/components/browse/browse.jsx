@@ -37,10 +37,7 @@ class BrowsePage extends React.Component {
     this.slider2.slickPrev();
   }
 
-  componentDidMount() {
-    this.props.fetchVideos();
-    this.props.fetchVideo(this.props.videoId);
-  }
+  
 
   handleMute(e) {
     if (this.state.muted === true) {
