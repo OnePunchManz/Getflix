@@ -256,7 +256,7 @@ class BrowsePage extends React.Component {
                   </div>
                   <Link to={`/videos/6`}>
                     <div className="black">
-                      <img className="item" src="./gintama.jpg" alt="" />
+                      <img className="item" src="./castle.jpg" alt="" />
                     </div>
                   </Link>
                   <div className="black">

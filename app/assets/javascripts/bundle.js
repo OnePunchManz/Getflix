@@ -633,7 +633,7 @@ function (_React$Component) {
         className: "black"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "item",
-        src: "./gintama.jpg",
+        src: "./castle.jpg",
         alt: ""
       }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "black"
