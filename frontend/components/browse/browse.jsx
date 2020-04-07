@@ -241,17 +241,17 @@ class BrowsePage extends React.Component {
                   </div>
                   <div className="black">
                     <Link to={`/videos/1`}>
-                      <img className="item" src="./onepunch.jpg" alt="" />
+                      <img className="item" src="./saiki.jpeg" alt="" />
                     </Link>
                   </div>
                   <div className="black">
                     <Link to={`/videos/4`}>
-                      <img className="item" src="./boku.png" alt="" />
+                      <img className="item" src="./one.jpg" alt="" />
                     </Link>
                   </div>
                   <div className="black">
                     <Link to={`/videos/5`}>
-                      <img className="item" src="./bebop.jpg" alt="" />
+                      <img className="item" src="./aot.jpg" alt="" />
                     </Link>
                   </div>
                   <Link to={`/videos/6`}>

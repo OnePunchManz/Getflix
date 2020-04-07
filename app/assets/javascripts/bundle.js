@@ -609,7 +609,7 @@ function (_React$Component) {
         to: "/videos/1"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "item",
-        src: "./onepunch.jpg",
+        src: "./saiki.jpeg",
         alt: ""
       }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "black"
@@ -617,7 +617,7 @@ function (_React$Component) {
         to: "/videos/4"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "item",
-        src: "./boku.png",
+        src: "./one.jpg",
         alt: ""
       }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "black"
@@ -625,7 +625,7 @@ function (_React$Component) {
         to: "/videos/5"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "item",
-        src: "./bebop.jpg",
+        src: "./aot.jpg",
         alt: ""
       }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
         to: "/videos/6"
