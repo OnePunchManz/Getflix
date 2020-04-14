@@ -2170,7 +2170,7 @@ function (_React$Component) {
         className: "black"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "item",
-        src: "./gintama.jpg",
+        src: "./thepromise.png",
         alt: ""
       }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "black"
@@ -2239,7 +2239,7 @@ function (_React$Component) {
         to: "/videos/4"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "item",
-        src: "./boku.png",
+        src: "./abyss.png",
         alt: ""
       }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "black"

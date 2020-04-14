@@ -186,7 +186,7 @@ class WeebPage extends React.Component {
                   </div>
                   <Link to={`/videos/6`}>
                     <div className="black">
-                      <img className="item" src="./gintama.jpg" alt="" />
+                      <img className="item" src="./thepromise.png" alt="" />
                     </div>
                   </Link>
                   <div className="black">
@@ -238,7 +238,7 @@ class WeebPage extends React.Component {
                   </div>
                   <div className="black">
                     <Link to={`/videos/4`}>
-                      <img className="item" src="./boku.png" alt="" />
+                      <img className="item" src="./abyss.png" alt="" />
                     </Link>
                   </div>
                   <div className="black">
