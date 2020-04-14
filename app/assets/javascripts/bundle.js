@@ -2130,7 +2130,7 @@ function (_React$Component) {
         to: "/videos/2"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "item",
-        src: "./pika.jpg",
+        src: "./samuraChamp.png",
         alt: ""
       }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "black"

@@ -161,7 +161,7 @@ class WeebPage extends React.Component {
                 >
                   <div className="black">
                     <Link to={`/videos/2`}>
-                      <img className="item" src="./pika.jpg" alt="" />
+                      <img className="item" src="./samuraChamp.png" alt="" />
                     </Link>
                   </div>
                   <div className="black">
