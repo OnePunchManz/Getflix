@@ -2138,7 +2138,7 @@ function (_React$Component) {
         to: "/videos/3"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "item",
-        src: "./hxh1.jpg",
+        src: "./jojo.jpg",
         alt: ""
       }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "black"
@@ -2146,7 +2146,7 @@ function (_React$Component) {
         to: "/videos/1"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "item",
-        src: "./onepunch.jpg",
+        src: "./demon.jpg",
         alt: ""
       }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "black"
@@ -2162,7 +2162,7 @@ function (_React$Component) {
         to: "/videos/5"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "item",
-        src: "./bebop.jpg",
+        src: "./code.jpg",
         alt: ""
       }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
         to: "/videos/6"
@@ -2215,7 +2215,7 @@ function (_React$Component) {
         to: "/videos/2"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "item",
-        src: "./pika.jpg",
+        src: "./castle.jpg",
         alt: ""
       }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "black"
@@ -2223,7 +2223,7 @@ function (_React$Component) {
         to: "/videos/3"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "item",
-        src: "./hxh1.jpg",
+        src: "./yuyu.jpg",
         alt: ""
       }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "black"

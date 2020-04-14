@@ -166,12 +166,12 @@ class WeebPage extends React.Component {
                   </div>
                   <div className="black">
                     <Link to={`/videos/3`}>
-                      <img className="item" src="./hxh1.jpg" alt="" />
+                      <img className="item" src="./jojo.jpg" alt="" />
                     </Link>
                   </div>
                   <div className="black">
                     <Link to={`/videos/1`}>
-                      <img className="item" src="./onepunch.jpg" alt="" />
+                      <img className="item" src="./demon.jpg" alt="" />
                     </Link>
                   </div>
                   <div className="black">
@@ -181,7 +181,7 @@ class WeebPage extends React.Component {
                   </div>
                   <div className="black">
                     <Link to={`/videos/5`}>
-                      <img className="item" src="./bebop.jpg" alt="" />
+                      <img className="item" src="./code.jpg" alt="" />
                     </Link>
                   </div>
                   <Link to={`/videos/6`}>
@@ -223,12 +223,12 @@ class WeebPage extends React.Component {
                 >
                   <div className="black">
                     <Link to={`/videos/2`}>
-                      <img className="item" src="./pika.jpg" alt="" />
+                      <img className="item" src="./castle.jpg" alt="" />
                     </Link>
                   </div>
                   <div className="black">
                     <Link to={`/videos/3`}>
-                      <img className="item" src="./hxh1.jpg" alt="" />
+                      <img className="item" src="./yuyu.jpg" alt="" />
                     </Link>
                   </div>
                   <div className="black">
