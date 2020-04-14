@@ -233,7 +233,7 @@ class WeebPage extends React.Component {
                   </div>
                   <div className="black">
                     <Link to={`/videos/1`}>
-                      <img className="item" src="./onepunch.jpg" alt="" />
+                      <img className="item" src="./fullmetal.jpg" alt="" />
                     </Link>
                   </div>
                   <div className="black">

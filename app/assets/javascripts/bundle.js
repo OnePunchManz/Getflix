@@ -2231,7 +2231,7 @@ function (_React$Component) {
         to: "/videos/1"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "item",
-        src: "./onepunch.jpg",
+        src: "./fullmetal.jpg",
         alt: ""
       }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "black"
